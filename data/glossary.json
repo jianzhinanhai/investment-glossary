@@ -1,0 +1,2141 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-14",
+  "categories": [
+    {
+      "id": "process",
+      "name": "投资流程与交易文件",
+      "description": "从发现标的到交割，读懂每份文件与关键决策。",
+      "count": 22
+    },
+    {
+      "id": "structures",
+      "name": "投资方式与股权结构",
+      "description": "辨别资本进入方式、控制权与股东权益。",
+      "count": 18
+    },
+    {
+      "id": "valuation",
+      "name": "估值与投资回报",
+      "description": "把企业价值、股权价值与资金回报放到同一张图上。",
+      "count": 24
+    },
+    {
+      "id": "financials",
+      "name": "财务与现金流",
+      "description": "从利润表走到真实现金，识别增长质量。",
+      "count": 22
+    },
+    {
+      "id": "funds",
+      "name": "基金管理与退出",
+      "description": "理解基金是谁管、钱如何流动、收益如何报告。",
+      "count": 16
+    },
+    {
+      "id": "software",
+      "name": "软件、SaaS 与 AI",
+      "description": "看清订阅增长、客户留存与 AI 成本。",
+      "count": 20
+    },
+    {
+      "id": "mandA",
+      "name": "并购、战略合作与整合",
+      "description": "从交易结构走到协同兑现。",
+      "count": 16
+    },
+    {
+      "id": "markets",
+      "name": "资本市场与风险",
+      "description": "理解上市路径、流动性与投资组合下行。",
+      "count": 12
+    }
+  ],
+  "terms": [
+    {
+      "id": "sourcing",
+      "category": "process",
+      "term": "Sourcing",
+      "fullName": "Sourcing",
+      "zh": "寻找潜在投资或收购标的。",
+      "practical": "投资人建立项目储备时，用它衡量机会来源和覆盖面。",
+      "plain": "先找到值得进一步看的公司。",
+      "related": [
+        "screening",
+        "teaser"
+      ]
+    },
+    {
+      "id": "screening",
+      "category": "process",
+      "term": "Screening",
+      "fullName": "Screening",
+      "zh": "按策略、行业、规模等条件初筛项目。",
+      "practical": "在投入尽调资源前，判断机会是否符合投资范围。",
+      "plain": "先筛掉明显不合适的项目。",
+      "related": [
+        "sourcing",
+        "dd"
+      ]
+    },
+    {
+      "id": "teaser",
+      "category": "process",
+      "term": "Teaser",
+      "fullName": "Teaser",
+      "zh": "不披露或少披露身份的项目简介。",
+      "practical": "买方用它决定是否签保密协议并索取更完整资料。",
+      "plain": "项目的简短预告。",
+      "related": [
+        "nda",
+        "cim"
+      ]
+    },
+    {
+      "id": "nda",
+      "category": "process",
+      "term": "NDA",
+      "fullName": "Non-Disclosure Agreement",
+      "zh": "保密协议，约束接收方使用和披露交易信息。",
+      "practical": "交换非公开资料前签署，核查保密范围、期限和例外。",
+      "plain": "先约定看资料后不能随意外传。",
+      "related": [
+        "cim",
+        "vdr"
+      ],
+      "note": "不同法域的竞业、招揽及救济条款需单独审阅。"
+    },
+    {
+      "id": "cim",
+      "category": "process",
+      "term": "CIM",
+      "fullName": "Confidential Information Memorandum",
+      "zh": "机密信息备忘录，系统介绍待售企业与交易机会。",
+      "practical": "买方据此形成初步投资判断并设计尽调重点。",
+      "plain": "比项目预告详细得多的说明书。",
+      "related": [
+        "teaser",
+        "dd"
+      ],
+      "note": "也常称 IM；内容由卖方提供，应独立核实。",
+      "aliases": [
+        "IM",
+        "Information Memorandum"
+      ]
+    },
+    {
+      "id": "vdr",
+      "category": "process",
+      "term": "VDR",
+      "fullName": "Virtual Data Room",
+      "zh": "虚拟数据室，受权限管理的交易资料平台。",
+      "practical": "尽调时按清单调取文件并追踪问题和版本。",
+      "plain": "交易各方共享材料的受控资料室。",
+      "related": [
+        "dd",
+        "nda"
+      ],
+      "note": "访问权限不代表资料已验证。",
+      "aliases": [
+        "Data Room"
+      ]
+    },
+    {
+      "id": "dd",
+      "category": "process",
+      "term": "DD",
+      "fullName": "Due Diligence",
+      "zh": "尽职调查，核实标的的业务、财务、法律与技术风险。",
+      "practical": "投资前验证投资论点、估值假设和交易保护。",
+      "plain": "花钱前把关键事实查清。",
+      "related": [
+        "cdd",
+        "fdd",
+        "ldd",
+        "tdd"
+      ]
+    },
+    {
+      "id": "cdd",
+      "category": "process",
+      "term": "CDD",
+      "fullName": "Commercial Due Diligence",
+      "zh": "商业尽调，研究市场、客户、竞争和增长可持续性。",
+      "practical": "判断收入预测是否可信以及战略协同是否成立。",
+      "plain": "看生意到底有没有市场。",
+      "related": [
+        "dd",
+        "revenue-synergy"
+      ]
+    },
+    {
+      "id": "fdd",
+      "category": "process",
+      "term": "FDD",
+      "fullName": "Financial Due Diligence",
+      "zh": "财务尽调，分析财务质量、债务和营运资金。",
+      "practical": "校准可持续盈利和交割价格调整。",
+      "plain": "看账上的钱和利润是否经得起核查。",
+      "related": [
+        "dd",
+        "qoe",
+        "nwc"
+      ]
+    },
+    {
+      "id": "ldd",
+      "category": "process",
+      "term": "LDD",
+      "fullName": "Legal Due Diligence",
+      "zh": "法律尽调，核查权属、合同、合规及潜在责任。",
+      "practical": "发现可能影响签约、交割或赔偿的法律风险。",
+      "plain": "看公司有哪些法律包袱。",
+      "related": [
+        "dd",
+        "spa"
+      ]
+    },
+    {
+      "id": "tdd",
+      "category": "process",
+      "term": "TDD",
+      "fullName": "Technical Due Diligence",
+      "zh": "技术尽调，评估产品架构、代码、数据与技术安全。",
+      "practical": "软件和 AI 投资时验证可扩展性、技术债与知识产权风险。",
+      "plain": "看技术能否支撑承诺的业务。",
+      "related": [
+        "dd",
+        "ai"
+      ]
+    },
+    {
+      "id": "qoe",
+      "category": "process",
+      "term": "QoE",
+      "fullName": "Quality of Earnings",
+      "zh": "盈利质量分析，区分可持续经营收益与一次性项目。",
+      "practical": "买方用它调整 EBITDA 基准及收购估值。",
+      "plain": "看利润有多少是常态而非偶然。",
+      "related": [
+        "fdd",
+        "adjusted-ebitda"
+      ],
+      "note": "QoE 不等同法定审计；调整口径应逐项留痕。"
+    },
+    {
+      "id": "ts",
+      "category": "process",
+      "term": "TS",
+      "fullName": "Term Sheet",
+      "zh": "条款清单，概括拟议投资的核心商业与法律条款。",
+      "practical": "在正式文件前对估值、权利、治理和排他性达成框架。",
+      "plain": "先把关键交易条件写在一张清单里。",
+      "related": [
+        "loi",
+        "spa",
+        "sha"
+      ],
+      "note": "本库的 TS 指 Term Sheet；具体条款是否有约束力以文件及适用法律为准。",
+      "aliases": [
+        "Termsheet"
+      ]
+    },
+    {
+      "id": "ioi",
+      "category": "process",
+      "term": "IOI",
+      "fullName": "Indication of Interest",
+      "zh": "意向性报价，通常是早期、非约束性的报价表示。",
+      "practical": "竞标初期用于筛选潜在买方和价格区间。",
+      "plain": "先表达大致愿意出多少钱。",
+      "related": [
+        "loi",
+        "cim"
+      ]
+    },
+    {
+      "id": "loi",
+      "category": "process",
+      "term": "LOI",
+      "fullName": "Letter of Intent",
+      "zh": "意向书，表达交易方向、主要条款及推进安排。",
+      "practical": "在正式合同前锁定谈判框架和时间表。",
+      "plain": "双方先确认大方向。",
+      "related": [
+        "ts",
+        "ioi"
+      ],
+      "note": "并非全部条款都当然不具约束力，应逐条判断。"
+    },
+    {
+      "id": "ic",
+      "category": "process",
+      "term": "IC",
+      "fullName": "Investment Committee",
+      "zh": "投资委员会，批准或否决投资决策的治理机构。",
+      "practical": "提交投资备忘录时核验收益、风险、估值和退出方案。",
+      "plain": "负责对投资拍板的委员会。",
+      "related": [
+        "dd",
+        "ts"
+      ]
+    },
+    {
+      "id": "spa",
+      "category": "process",
+      "term": "SPA",
+      "fullName": "Share Purchase Agreement",
+      "zh": "股份购买协议，规定股权转让、价格、保证与交割。",
+      "practical": "签约时明确买卖双方义务、价格调整和救济机制。",
+      "plain": "真正写清怎么买股权的合同。",
+      "related": [
+        "signing",
+        "closing",
+        "disclosure-schedule"
+      ],
+      "note": "资产收购通常使用资产购买协议，不能机械套用 SPA。"
+    },
+    {
+      "id": "sha",
+      "category": "process",
+      "term": "SHA",
+      "fullName": "Shareholders' Agreement",
+      "zh": "股东协议，约定股东间治理、转让和保护权利。",
+      "practical": "少数股权或合资投资时评估董事席位、否决权和退出。",
+      "plain": "股东之间如何共同做决定的规则。",
+      "related": [
+        "jv",
+        "preferred-stock"
+      ]
+    },
+    {
+      "id": "cp",
+      "category": "process",
+      "term": "CP",
+      "fullName": "Conditions Precedent",
+      "zh": "先决条件，交割前必须满足或豁免的事项。",
+      "practical": "检查审批、融资和其他交割条件是否完成。",
+      "plain": "先过几道关，交易才真正完成。",
+      "related": [
+        "signing",
+        "closing"
+      ]
+    },
+    {
+      "id": "signing",
+      "category": "process",
+      "term": "Signing",
+      "fullName": "Signing",
+      "zh": "交易各方签署正式协议的时点。",
+      "practical": "确定法律义务启动及签约到交割期间的安排。",
+      "plain": "先把合同签好。",
+      "related": [
+        "spa",
+        "closing"
+      ]
+    },
+    {
+      "id": "closing",
+      "category": "process",
+      "term": "Closing",
+      "fullName": "Closing",
+      "zh": "先决条件满足后完成支付和权属交付的时点。",
+      "practical": "核验资金、股权转移及交割后义务。",
+      "plain": "钱和股权按约定真正交接。",
+      "related": [
+        "cp",
+        "signing",
+        "pmi"
+      ]
+    },
+    {
+      "id": "disclosure-schedule",
+      "category": "process",
+      "term": "Disclosure Schedule",
+      "fullName": "Disclosure Schedule",
+      "zh": "随交易协议提交的披露清单，用于细化事实和例外。",
+      "practical": "核对陈述保证的例外和潜在风险分配。",
+      "plain": "把合同里的例外情况逐项列出来。",
+      "related": [
+        "spa",
+        "representations-and-warranties"
+      ]
+    },
+    {
+      "id": "vc",
+      "category": "structures",
+      "term": "VC",
+      "fullName": "Venture Capital",
+      "zh": "风险投资，主要支持早期及高增长企业。",
+      "practical": "评估高不确定性项目时关注增长潜力、后续融资和退出。",
+      "plain": "用资金押注可能快速成长的公司。",
+      "related": [
+        "pe",
+        "preferred-stock"
+      ]
+    },
+    {
+      "id": "pe",
+      "category": "structures",
+      "term": "PE",
+      "fullName": "Private Equity",
+      "zh": "私募股权投资，通常投资非上市公司股权。",
+      "practical": "分析成熟企业改善空间、杠杆与退出路径。",
+      "plain": "在公开市场之外投资企业股权。",
+      "related": [
+        "vc",
+        "buyout"
+      ]
+    },
+    {
+      "id": "cvc",
+      "category": "structures",
+      "term": "CVC",
+      "fullName": "Corporate Venture Capital",
+      "zh": "企业风险投资，由产业公司进行的创投活动。",
+      "practical": "同时衡量财务回报与业务协同，避免战略目标模糊。",
+      "plain": "大公司投资新公司，既看收益也看战略价值。",
+      "related": [
+        "vc",
+        "strategic-alliance"
+      ]
+    },
+    {
+      "id": "growth-equity",
+      "category": "structures",
+      "term": "Growth Equity",
+      "fullName": "Growth Equity",
+      "zh": "成长股权投资，面向已有业务基础的成长企业。",
+      "practical": "判断追加资本能否推动扩张而非单纯填补亏损。",
+      "plain": "给已经跑起来的公司加速资金。",
+      "related": [
+        "vc",
+        "pe"
+      ]
+    },
+    {
+      "id": "buyout",
+      "category": "structures",
+      "term": "Buyout",
+      "fullName": "Buyout",
+      "zh": "收购控股权的交易。",
+      "practical": "判断控制权价值、融资安排和运营改善空间。",
+      "plain": "买下公司或取得主导权。",
+      "related": [
+        "lbo",
+        "majority-investment"
+      ]
+    },
+    {
+      "id": "lbo",
+      "category": "structures",
+      "term": "LBO",
+      "fullName": "Leveraged Buyout",
+      "zh": "杠杆收购，使用较多债务融资完成控股收购。",
+      "practical": "测算偿债能力、现金流和股权回报的敏感性。",
+      "plain": "借一部分钱买公司，再靠经营现金还债。",
+      "related": [
+        "buyout",
+        "debt-ebitda"
+      ],
+      "note": "高杠杆也会放大下行情形的损失。"
+    },
+    {
+      "id": "minority-investment",
+      "category": "structures",
+      "term": "Minority Investment",
+      "fullName": "Minority Investment",
+      "zh": "不取得控制权的少数股权投资。",
+      "practical": "重点谈判信息权、保护条款和退出安排。",
+      "plain": "投了一部分，但通常不能单独拍板。",
+      "related": [
+        "sha",
+        "majority-investment"
+      ]
+    },
+    {
+      "id": "majority-investment",
+      "category": "structures",
+      "term": "Majority Investment",
+      "fullName": "Majority Investment",
+      "zh": "取得超过半数或实际控制权的股权投资。",
+      "practical": "评估控制权、合并报表和整合责任。",
+      "plain": "持股或权利足以主导公司。",
+      "related": [
+        "buyout",
+        "minority-investment"
+      ],
+      "note": "实际控制不只由持股比例决定。"
+    },
+    {
+      "id": "primary-investment",
+      "category": "structures",
+      "term": "Primary Investment",
+      "fullName": "Primary Investment",
+      "zh": "认购公司新发行证券，资金流入公司。",
+      "practical": "判断融资后资本结构和原股东稀释。",
+      "plain": "钱进公司，公司新发股份。",
+      "related": [
+        "secondary-transaction",
+        "dilution"
+      ]
+    },
+    {
+      "id": "secondary-transaction",
+      "category": "structures",
+      "term": "Secondary Transaction",
+      "fullName": "Secondary Transaction",
+      "zh": "购买现有股东持有的证券，资金通常给卖方。",
+      "practical": "区分老股转让与增资，判断公司是否获得新资金。",
+      "plain": "从老股东手里买股。",
+      "related": [
+        "primary-investment",
+        "equity-value"
+      ],
+      "note": "基金份额二级交易也可称 secondary，须看语境。"
+    },
+    {
+      "id": "spv",
+      "category": "structures",
+      "term": "SPV",
+      "fullName": "Special Purpose Vehicle",
+      "zh": "为特定投资或融资设立的特殊目的实体。",
+      "practical": "审查持股、税务、融资和风险隔离安排。",
+      "plain": "为一笔交易专门设的公司或载体。",
+      "related": [
+        "jv",
+        "fund"
+      ]
+    },
+    {
+      "id": "jv",
+      "category": "structures",
+      "term": "JV",
+      "fullName": "Joint Venture",
+      "zh": "合资企业，由多方共同出资或控制。",
+      "practical": "战略投资中明确出资、治理、技术和退出机制。",
+      "plain": "两家或多家一起办公司。",
+      "related": [
+        "sha",
+        "strategic-alliance"
+      ]
+    },
+    {
+      "id": "common-stock",
+      "category": "structures",
+      "term": "Common Stock",
+      "fullName": "Common Stock",
+      "zh": "普通股，通常享有剩余收益和表决权。",
+      "practical": "计算控制权、稀释和清算顺位。",
+      "plain": "最基础的一类股权。",
+      "related": [
+        "preferred-stock",
+        "cap-table"
+      ]
+    },
+    {
+      "id": "preferred-stock",
+      "category": "structures",
+      "term": "Preferred Stock",
+      "fullName": "Preferred Stock",
+      "zh": "优先股，权利可能包括清算优先或转换。",
+      "practical": "分析不同轮次投资人的收益分配和保护条款。",
+      "plain": "在某些分配或权利上优先的股份。",
+      "related": [
+        "common-stock",
+        "safe"
+      ],
+      "note": "具体权利取决于发行文件，名称本身不保证固定收益。"
+    },
+    {
+      "id": "convertible-note",
+      "category": "structures",
+      "term": "Convertible Note",
+      "fullName": "Convertible Note",
+      "zh": "可转换票据，满足约定条件时可转为股权的债权。",
+      "practical": "早期融资时评估利息、到期、折扣和估值上限。",
+      "plain": "先借钱给公司，未来可能换成股份。",
+      "related": [
+        "safe",
+        "pre-money-valuation"
+      ]
+    },
+    {
+      "id": "safe",
+      "category": "structures",
+      "term": "SAFE",
+      "fullName": "Simple Agreement for Future Equity",
+      "zh": "未来股权简单协议，按约定事件转换为股权的融资工具。",
+      "practical": "审查估值上限、折扣和转换规则对稀释的影响。",
+      "plain": "先出钱，下一轮按规则拿股份。",
+      "related": [
+        "convertible-note",
+        "dilution"
+      ],
+      "note": "SAFE 通常不是传统债务；具体版本条款有差异。"
+    },
+    {
+      "id": "cap-table",
+      "category": "structures",
+      "term": "Cap Table",
+      "fullName": "Capitalization Table",
+      "zh": "股权结构表，记录股东、证券及完全稀释后权益。",
+      "practical": "融资前后核算持股、期权和优先权。",
+      "plain": "谁持有多少股份的一张总表。",
+      "related": [
+        "fully-diluted-shares",
+        "dilution"
+      ]
+    },
+    {
+      "id": "liquidation-preference",
+      "category": "structures",
+      "term": "Liquidation Preference",
+      "fullName": "Liquidation Preference",
+      "zh": "清算优先权，约定优先股在退出时先分配的规则。",
+      "practical": "测算不同退出价格下普通股和优先股收益。",
+      "plain": "卖公司分钱时，先按约定顺序分。",
+      "related": [
+        "preferred-stock",
+        "equity-value"
+      ],
+      "note": "参与型与非参与型、倍数和分红规则必须分开看。"
+    },
+    {
+      "id": "ev",
+      "category": "valuation",
+      "term": "EV",
+      "fullName": "Enterprise Value",
+      "zh": "企业价值，衡量经营资产对全部资本提供者的价值。",
+      "practical": "比较不同债务结构的公司，并作为 EV 倍数分子。",
+      "plain": "整盘生意值多少钱。",
+      "related": [
+        "equity-value",
+        "net-debt"
+      ],
+      "note": "常用桥接：EV≈股权价值+有息债务及类似项目－现金及非经营资产；少数股东权益等视口径调整。",
+      "aliases": [
+        "Enterprise Value"
+      ]
+    },
+    {
+      "id": "equity-value",
+      "category": "valuation",
+      "term": "Equity Value",
+      "fullName": "Equity Value",
+      "zh": "股权价值，归属于普通及相关股权持有人的价值。",
+      "practical": "确定收购股权报价和每股价格。",
+      "plain": "扣掉净债务等之后股东手里的价值。",
+      "related": [
+        "ev",
+        "net-debt"
+      ],
+      "note": "EV 与股权价值不能混用；桥接项按交易定义核对。"
+    },
+    {
+      "id": "net-debt",
+      "category": "valuation",
+      "term": "Net Debt",
+      "fullName": "Net Debt",
+      "zh": "净债务，通常为有息债务减可用现金。",
+      "practical": "从企业价值桥接到股权价值并设交割价格调整。",
+      "plain": "欠的债减去手头可动用的现金。",
+      "related": [
+        "ev",
+        "equity-value"
+      ],
+      "note": "现金是否受限、租赁负债和类债务项目需在交易文件中约定。"
+    },
+    {
+      "id": "ev-ebitda",
+      "category": "valuation",
+      "term": "EV/EBITDA",
+      "fullName": "Enterprise Value to EBITDA",
+      "zh": "企业价值与 EBITDA 之比的估值倍数。",
+      "practical": "同业比较时观察经营价值相对盈利的定价。",
+      "plain": "买整家公司相当于多少年的 EBITDA。",
+      "related": [
+        "ev",
+        "ebitda"
+      ],
+      "note": "不同企业的资本开支、会计政策和一次性项目仍会造成差异。"
+    },
+    {
+      "id": "p-e",
+      "category": "valuation",
+      "term": "P/E",
+      "fullName": "Price to Earnings Ratio",
+      "zh": "市盈率，股权市值与归母净利润之比。",
+      "practical": "比较上市或可比公司的股权估值。",
+      "plain": "股价相当于多少年净利润。",
+      "related": [
+        "equity-value",
+        "net-income"
+      ],
+      "note": "负利润时该倍数通常失去直观比较意义。",
+      "aliases": [
+        "PE Ratio"
+      ]
+    },
+    {
+      "id": "p-s",
+      "category": "valuation",
+      "term": "P/S",
+      "fullName": "Price to Sales Ratio",
+      "zh": "市销率，股权市值与收入之比。",
+      "practical": "亏损成长企业估值时提供收入基准。",
+      "plain": "股权价格是年收入的多少倍。",
+      "related": [
+        "equity-value",
+        "revenue"
+      ],
+      "note": "高低须结合毛利率、增长和现金消耗。",
+      "aliases": [
+        "PS Ratio"
+      ]
+    },
+    {
+      "id": "dcf",
+      "category": "valuation",
+      "term": "DCF",
+      "fullName": "Discounted Cash Flow",
+      "zh": "现金流折现法，把未来现金流折算为今天的价值。",
+      "practical": "检验价格是否由可实现的现金流支持。",
+      "plain": "未来能赚到的现金，折成今天值多少。",
+      "related": [
+        "fcff",
+        "wacc",
+        "terminal-value"
+      ],
+      "note": "用 FCFF 折现通常得到 EV；用 FCFE 折现通常得到股权价值。"
+    },
+    {
+      "id": "wacc",
+      "category": "valuation",
+      "term": "WACC",
+      "fullName": "Weighted Average Cost of Capital",
+      "zh": "加权平均资本成本，债务与股权资金成本的加权值。",
+      "practical": "用作与 FCFF 风险及资本结构匹配的折现率。",
+      "plain": "公司筹集各种资金的综合成本。",
+      "related": [
+        "dcf",
+        "cost-of-equity",
+        "cost-of-debt"
+      ],
+      "note": "常见税后形式：WACC=E/(D+E)×Re+D/(D+E)×Rd×(1－税率)。"
+    },
+    {
+      "id": "terminal-value",
+      "category": "valuation",
+      "term": "Terminal Value",
+      "fullName": "Terminal Value",
+      "zh": "终值，预测期末之后持续经营现金流的估计价值。",
+      "practical": "检查 DCF 是否过度依赖远期假设。",
+      "plain": "把预测期后很长一段时间的价值合成一个数。",
+      "related": [
+        "dcf",
+        "perpetuity-growth-rate"
+      ],
+      "note": "永续增长法要求折现率大于长期增长率。"
+    },
+    {
+      "id": "irr",
+      "category": "valuation",
+      "term": "IRR",
+      "fullName": "Internal Rate of Return",
+      "zh": "内部收益率，使一系列现金流净现值等于零的折现率。",
+      "practical": "比较不同时间分布的投资回报，并与资金成本比较。",
+      "plain": "把钱赚回来有多快，也计入等待时间。",
+      "related": [
+        "moic",
+        "npv"
+      ],
+      "note": "IRR 是资金加权、通常年化；非正常现金流可能有多个或无有效 IRR，未实现价值依赖估值。"
+    },
+    {
+      "id": "moic",
+      "category": "valuation",
+      "term": "MOIC",
+      "fullName": "Multiple on Invested Capital",
+      "zh": "投入资本倍数，投资价值或回款相对投入资本的倍数。",
+      "practical": "快速看一笔投资共收回了投入的几倍。",
+      "plain": "投 1 元最终值 2 元，就是 2.0 倍。",
+      "related": [
+        "irr",
+        "dpi"
+      ],
+      "note": "MOIC 不反映持有时间；须注明税费前后及是否包含未实现价值。"
+    },
+    {
+      "id": "roi",
+      "category": "valuation",
+      "term": "ROI",
+      "fullName": "Return on Investment",
+      "zh": "投资回报率，收益相对投资成本的比例。",
+      "practical": "做单项目粗略收益比较。",
+      "plain": "赚的钱占最初投入的百分比。",
+      "related": [
+        "moic",
+        "irr"
+      ],
+      "note": "ROI 通常不处理现金流时间；定义中的收益和成本范围要说清。"
+    },
+    {
+      "id": "npv",
+      "category": "valuation",
+      "term": "NPV",
+      "fullName": "Net Present Value",
+      "zh": "净现值，未来现金流现值减初始投资。",
+      "practical": "判断项目在给定折现率下是否创造价值。",
+      "plain": "折到今天后，收入比支出多多少。",
+      "related": [
+        "dcf",
+        "irr"
+      ],
+      "note": "NPV>0 仅说明在所用折现率与假设下创造价值。"
+    },
+    {
+      "id": "pre-money-valuation",
+      "category": "valuation",
+      "term": "Pre-money Valuation",
+      "fullName": "Pre-money Valuation",
+      "zh": "融资前估值，新资金进入前的股权价值。",
+      "practical": "计算新投资人持股和老股东稀释。",
+      "plain": "新钱进来之前公司股权值多少。",
+      "related": [
+        "post-money-valuation",
+        "dilution"
+      ]
+    },
+    {
+      "id": "post-money-valuation",
+      "category": "valuation",
+      "term": "Post-money Valuation",
+      "fullName": "Post-money Valuation",
+      "zh": "融资后估值，通常为融资前估值加本轮新投入资金。",
+      "practical": "计算融资完成后的持股比例。",
+      "plain": "新钱进来之后公司股权值多少。",
+      "related": [
+        "pre-money-valuation",
+        "dilution"
+      ],
+      "note": "简单公式假设纯增资且无其他调整或同步老股交易。"
+    },
+    {
+      "id": "dilution",
+      "category": "valuation",
+      "term": "Dilution",
+      "fullName": "Dilution",
+      "zh": "稀释，新增证券使现有股东持股比例下降。",
+      "practical": "评估融资、期权和可转换工具的权益影响。",
+      "plain": "公司这块蛋糕切出新份额，旧份额比例变小。",
+      "related": [
+        "cap-table",
+        "post-money-valuation"
+      ],
+      "note": "比例稀释不必然意味着持股经济价值下降。"
+    },
+    {
+      "id": "fully-diluted-shares",
+      "category": "valuation",
+      "term": "Fully Diluted Shares",
+      "fullName": "Fully Diluted Shares",
+      "zh": "完全稀释股数，假设符合口径的潜在股份转股后的股数。",
+      "practical": "计算每股价格、期权池和投资人最终持股。",
+      "plain": "把可能变成股份的工具也算进去。",
+      "related": [
+        "cap-table",
+        "dilution"
+      ],
+      "note": "期权、认股权证、可转工具的纳入规则需统一。"
+    },
+    {
+      "id": "entry-multiple",
+      "category": "valuation",
+      "term": "Entry Multiple",
+      "fullName": "Entry Multiple",
+      "zh": "入场估值倍数，投资时价格相对选定指标的倍数。",
+      "practical": "分析买入价格是否为未来回报留足空间。",
+      "plain": "买入时付了多少倍。",
+      "related": [
+        "exit-multiple",
+        "ev-ebitda"
+      ]
+    },
+    {
+      "id": "exit-multiple",
+      "category": "valuation",
+      "term": "Exit Multiple",
+      "fullName": "Exit Multiple",
+      "zh": "退出估值倍数，出售时价格相对选定指标的倍数。",
+      "practical": "做回报情景与终值敏感性分析。",
+      "plain": "卖出时市场愿付多少倍。",
+      "related": [
+        "entry-multiple",
+        "multiple-expansion"
+      ]
+    },
+    {
+      "id": "multiple-expansion",
+      "category": "valuation",
+      "term": "Multiple Expansion",
+      "fullName": "Multiple Expansion",
+      "zh": "估值倍数提升带来的价值增量。",
+      "practical": "拆分业绩增长与市场定价变化对回报的贡献。",
+      "plain": "同样的利润，市场愿意付更高价格。",
+      "related": [
+        "entry-multiple",
+        "exit-multiple"
+      ],
+      "note": "倍数压缩则相反；不能把倍数提升当作确定收益。"
+    },
+    {
+      "id": "cost-of-equity",
+      "category": "valuation",
+      "term": "Cost of Equity",
+      "fullName": "Cost of Equity",
+      "zh": "股权资本成本，股东要求的预期回报率。",
+      "practical": "估算 WACC、评估风险与目标回报。",
+      "plain": "股东出资希望得到的最低合理回报。",
+      "related": [
+        "wacc",
+        "cost-of-debt"
+      ]
+    },
+    {
+      "id": "cost-of-debt",
+      "category": "valuation",
+      "term": "Cost of Debt",
+      "fullName": "Cost of Debt",
+      "zh": "债务资本成本，企业借款的经济成本。",
+      "practical": "评估融资结构、利息压力和 WACC。",
+      "plain": "借钱的成本。",
+      "related": [
+        "wacc",
+        "interest-coverage"
+      ],
+      "note": "WACC 中通常采用税后债务成本，前提是税盾可用。"
+    },
+    {
+      "id": "perpetuity-growth-rate",
+      "category": "valuation",
+      "term": "Perpetuity Growth Rate",
+      "fullName": "Perpetuity Growth Rate",
+      "zh": "永续增长率，终值模型中长期现金流增长假设。",
+      "practical": "检验 DCF 终值是否过于乐观。",
+      "plain": "假设公司长期每年稳定增长多少。",
+      "related": [
+        "terminal-value",
+        "dcf"
+      ],
+      "note": "长期增长率通常不宜无限高于经济长期增长能力。"
+    },
+    {
+      "id": "sensitivity-analysis",
+      "category": "valuation",
+      "term": "Sensitivity Analysis",
+      "fullName": "Sensitivity Analysis",
+      "zh": "敏感性分析，改变关键假设观察估值或回报变化。",
+      "practical": "识别最影响投资结果的变量和下行情景。",
+      "plain": "改一改假设，看结论会变多少。",
+      "related": [
+        "dcf",
+        "irr"
+      ]
+    },
+    {
+      "id": "revenue",
+      "category": "financials",
+      "term": "Revenue",
+      "fullName": "Revenue",
+      "zh": "收入，企业在日常经营中确认的对价。",
+      "practical": "检验业务规模、增长和收入确认政策。",
+      "plain": "卖产品或服务记下来的营业收入。",
+      "related": [
+        "arr",
+        "gross-profit"
+      ],
+      "note": "收入按会计准则确认，不等同于回款或 ARR。"
+    },
+    {
+      "id": "gross-profit",
+      "category": "financials",
+      "term": "Gross Profit",
+      "fullName": "Gross Profit",
+      "zh": "毛利润，收入减去销售成本。",
+      "practical": "判断产品单位经济性和可扩张空间。",
+      "plain": "卖出去后扣掉直接成本还剩多少。",
+      "related": [
+        "revenue",
+        "gross-margin"
+      ],
+      "note": "财务报表中的 GP 常指 Gross Profit；本库 GP 词条用于基金普通合伙人。"
+    },
+    {
+      "id": "gross-margin",
+      "category": "financials",
+      "term": "Gross Margin",
+      "fullName": "Gross Margin",
+      "zh": "毛利率，毛利润占收入的比例。",
+      "practical": "比较产品定价能力、交付效率及同行差异。",
+      "plain": "每卖 100 元，扣掉直接成本还剩几元。",
+      "related": [
+        "gross-profit",
+        "revenue"
+      ],
+      "note": "毛利率=毛利润÷收入；成本归集口径要一致。"
+    },
+    {
+      "id": "ebitda",
+      "category": "financials",
+      "term": "EBITDA",
+      "fullName": "Earnings Before Interest, Taxes, Depreciation and Amortization",
+      "zh": "息税折旧摊销前利润，常用经营盈利代理指标。",
+      "practical": "用于同业估值和债务承载能力初筛。",
+      "plain": "先看生意经营赚多少，暂不计利息、税和折旧摊销。",
+      "related": [
+        "adjusted-ebitda",
+        "fcf",
+        "ev-ebitda"
+      ],
+      "note": "EBITDA 不是现金流；忽略资本开支、营运资金和税款会高估可用现金。"
+    },
+    {
+      "id": "adjusted-ebitda",
+      "category": "financials",
+      "term": "Adjusted EBITDA",
+      "fullName": "Adjusted EBITDA",
+      "zh": "经约定调整的 EBITDA，剔除或重分类特定项目。",
+      "practical": "估值谈判中核查正常化盈利基数。",
+      "plain": "把一次性项目调开后再看经营利润。",
+      "related": [
+        "ebitda",
+        "qoe"
+      ],
+      "note": "调整项目需逐项证据支持，买卖双方可能采用不同口径。"
+    },
+    {
+      "id": "ebit",
+      "category": "financials",
+      "term": "EBIT",
+      "fullName": "Earnings Before Interest and Taxes",
+      "zh": "息税前利润，营业利润的一种常用近似口径。",
+      "practical": "分析经营收益与资本结构无关的部分。",
+      "plain": "利润先不算利息和所得税。",
+      "related": [
+        "ebitda",
+        "operating-margin"
+      ],
+      "note": "不同报表对营业利润和 EBIT 的桥接口径可能不同。"
+    },
+    {
+      "id": "net-income",
+      "category": "financials",
+      "term": "Net Income",
+      "fullName": "Net Income",
+      "zh": "净利润，扣除各项费用与税后的会计利润。",
+      "practical": "判断最终盈利、每股收益和市盈率。",
+      "plain": "账面上最后剩下的利润。",
+      "related": [
+        "p-e",
+        "fcf"
+      ],
+      "note": "净利润不是现金余额，也不是自由现金流。"
+    },
+    {
+      "id": "cfo",
+      "category": "financials",
+      "term": "CFO",
+      "fullName": "Cash Flow from Operations",
+      "zh": "经营活动现金流，企业日常经营形成的净现金流。",
+      "practical": "检验利润能否转化为现金。",
+      "plain": "做生意实际带回多少现金。",
+      "related": [
+        "fcf",
+        "nwc"
+      ],
+      "note": "本库 CFO 指经营活动现金流；在职务语境也可指首席财务官。"
+    },
+    {
+      "id": "capex",
+      "category": "financials",
+      "term": "CapEx",
+      "fullName": "Capital Expenditure",
+      "zh": "资本性支出，用于购建长期资产的支出。",
+      "practical": "评估维持或扩张业务所需的再投资。",
+      "plain": "买设备、建系统等长期投入。",
+      "related": [
+        "fcf",
+        "ebitda"
+      ],
+      "note": "维持性和成长性资本开支的区分需要具体分析。"
+    },
+    {
+      "id": "fcf",
+      "category": "financials",
+      "term": "FCF",
+      "fullName": "Free Cash Flow",
+      "zh": "自由现金流，常见简化口径为经营现金流减资本开支。",
+      "practical": "衡量业务可用于偿债、分红或再投资的现金。",
+      "plain": "交完日常运营和必要长期投入后剩下的现金。",
+      "related": [
+        "cfo",
+        "capex",
+        "ebitda"
+      ],
+      "note": "FCF 有多种定义；分析时须说明是 CFO－CapEx、FCFF 还是 FCFE。"
+    },
+    {
+      "id": "fcff",
+      "category": "financials",
+      "term": "FCFF",
+      "fullName": "Free Cash Flow to the Firm",
+      "zh": "企业自由现金流，可供债权人与股东分配的现金流。",
+      "practical": "在 DCF 中与 WACC 配对估算企业价值。",
+      "plain": "公司所有出资人共同可分的现金。",
+      "related": [
+        "fcfe",
+        "dcf"
+      ],
+      "note": "常用简式：EBIT×(1－税率)+折旧摊销－资本开支－营运资本增加。"
+    },
+    {
+      "id": "fcfe",
+      "category": "financials",
+      "term": "FCFE",
+      "fullName": "Free Cash Flow to Equity",
+      "zh": "股权自由现金流，可供普通股股东分配的现金流。",
+      "practical": "折现估算股权价值并考虑净借款影响。",
+      "plain": "还完债权人相关支出后股东可分的现金。",
+      "related": [
+        "fcff",
+        "equity-value"
+      ],
+      "note": "常用桥接：FCFE=FCFF－税后利息+净借款；应核对具体口径。"
+    },
+    {
+      "id": "nwc",
+      "category": "financials",
+      "term": "NWC",
+      "fullName": "Net Working Capital",
+      "zh": "净营运资金，常按经营性流动资产减经营性流动负债。",
+      "practical": "交易定价和现金流预测中评估业务占用资金。",
+      "plain": "做日常生意垫进去的周转钱。",
+      "related": [
+        "fdd",
+        "ccc"
+      ],
+      "note": "交易中的 NWC 往往排除现金、有息债务及非经营项目，定义需写明。"
+    },
+    {
+      "id": "ccc",
+      "category": "financials",
+      "term": "CCC",
+      "fullName": "Cash Conversion Cycle",
+      "zh": "现金转换周期，库存和应收占款减去应付缓冲的天数。",
+      "practical": "分析业务从付款到收款要占用现金多久。",
+      "plain": "货款付出后多久能收回来。",
+      "related": [
+        "dso",
+        "dpo",
+        "dio"
+      ],
+      "note": "CCC=DIO+DSO－DPO；负值可能反映先收后付。"
+    },
+    {
+      "id": "dso",
+      "category": "financials",
+      "term": "DSO",
+      "fullName": "Days Sales Outstanding",
+      "zh": "应收账款周转天数，衡量销售变现速度。",
+      "practical": "发现账期拉长与回款质量恶化。",
+      "plain": "卖出后平均几天收到钱。",
+      "related": [
+        "ccc",
+        "revenue"
+      ],
+      "note": "常用近似：平均应收账款÷赊销收入×期间天数。"
+    },
+    {
+      "id": "dpo",
+      "category": "financials",
+      "term": "DPO",
+      "fullName": "Days Payable Outstanding",
+      "zh": "应付账款周转天数，衡量向供应商付款速度。",
+      "practical": "理解供应商信用对现金周转的贡献。",
+      "plain": "向供应商平均拖多少天付款。",
+      "related": [
+        "ccc",
+        "nwc"
+      ],
+      "note": "过高可能预示供应链压力，需结合合同和逾期情况。"
+    },
+    {
+      "id": "dio",
+      "category": "financials",
+      "term": "DIO",
+      "fullName": "Days Inventory Outstanding",
+      "zh": "存货周转天数，衡量库存变现时间。",
+      "practical": "识别库存积压与减值风险。",
+      "plain": "货平均压仓多少天。",
+      "related": [
+        "ccc",
+        "nwc"
+      ],
+      "note": "常用近似：平均存货÷销售成本×期间天数。"
+    },
+    {
+      "id": "roic",
+      "category": "financials",
+      "term": "ROIC",
+      "fullName": "Return on Invested Capital",
+      "zh": "投入资本回报率，税后经营利润相对投入资本的回报。",
+      "practical": "检验增长是否真正创造资本价值。",
+      "plain": "每投入一元经营资本能赚多少。",
+      "related": [
+        "wacc",
+        "ebit"
+      ],
+      "note": "常用口径：NOPAT÷平均投入资本；与 WACC 比较时注意口径一致。"
+    },
+    {
+      "id": "roe",
+      "category": "financials",
+      "term": "ROE",
+      "fullName": "Return on Equity",
+      "zh": "净资产收益率，净利润相对平均股东权益的比例。",
+      "practical": "评估股东账面资本的盈利能力。",
+      "plain": "股东账面每投一元赚多少。",
+      "related": [
+        "net-income",
+        "roic"
+      ],
+      "note": "杠杆会影响 ROE，单看高 ROE 可能误判经营效率。"
+    },
+    {
+      "id": "debt-ebitda",
+      "category": "financials",
+      "term": "Debt/EBITDA",
+      "fullName": "Debt to EBITDA Ratio",
+      "zh": "债务与 EBITDA 之比的杠杆倍数。",
+      "practical": "初筛债务负担与再融资风险。",
+      "plain": "债有经营盈利的多少倍。",
+      "related": [
+        "ebitda",
+        "interest-coverage"
+      ],
+      "note": "债务是否用净债务、EBITDA 是否调整，应明确。"
+    },
+    {
+      "id": "interest-coverage",
+      "category": "financials",
+      "term": "Interest Coverage",
+      "fullName": "Interest Coverage Ratio",
+      "zh": "利息保障倍数，衡量经营收益覆盖利息的能力。",
+      "practical": "测试加杠杆后的偿债安全边际。",
+      "plain": "经营收益够付几次利息。",
+      "related": [
+        "ebit",
+        "cost-of-debt"
+      ],
+      "note": "常见 EBIT÷利息费用，也有 EBITDA 口径，比较须统一。"
+    },
+    {
+      "id": "operating-margin",
+      "category": "financials",
+      "term": "Operating Margin",
+      "fullName": "Operating Margin",
+      "zh": "营业利润率，营业利润占收入的比例。",
+      "practical": "评估经营费用控制和规模效应。",
+      "plain": "每卖 100 元，扣完主要经营费用还剩多少。",
+      "related": [
+        "revenue",
+        "ebit"
+      ],
+      "note": "营业利润定义因会计准则及报表列示而异。"
+    },
+    {
+      "id": "gp",
+      "category": "funds",
+      "term": "GP",
+      "fullName": "General Partner",
+      "zh": "普通合伙人，在基金语境中负责管理并承担约定义务的一方。",
+      "practical": "评估管理团队、利益一致性和治理机制。",
+      "plain": "负责管基金和做投资的人或机构。",
+      "related": [
+        "lp",
+        "carry"
+      ],
+      "note": "本库 GP 指 General Partner；财务报表中的 GP 也可能指 Gross Profit。"
+    },
+    {
+      "id": "lp",
+      "category": "funds",
+      "term": "LP",
+      "fullName": "Limited Partner",
+      "zh": "有限合伙人，向基金承诺出资的投资者。",
+      "practical": "评估资金来源、出资义务及分配权利。",
+      "plain": "出钱参与基金、通常不负责日常管理的一方。",
+      "related": [
+        "gp",
+        "commitment"
+      ]
+    },
+    {
+      "id": "fund",
+      "category": "funds",
+      "term": "Fund",
+      "fullName": "Fund",
+      "zh": "汇集投资者资本并按策略投资的基金载体。",
+      "practical": "分析策略、期限、费用和投资组合风险。",
+      "plain": "把多位投资人的钱集中起来投资。",
+      "related": [
+        "gp",
+        "lp"
+      ]
+    },
+    {
+      "id": "commitment",
+      "category": "funds",
+      "term": "Commitment",
+      "fullName": "Commitment",
+      "zh": "承诺出资额，投资者同意按约向基金投入的总额。",
+      "practical": "判断基金规模与未缴出资义务。",
+      "plain": "答应以后最多投入多少钱。",
+      "related": [
+        "capital-call",
+        "invested-capital"
+      ],
+      "note": "承诺额不同于已经实际缴纳的金额。"
+    },
+    {
+      "id": "capital-call",
+      "category": "funds",
+      "term": "Capital Call",
+      "fullName": "Capital Call",
+      "zh": "缴款通知，基金要求投资者缴纳部分承诺资本。",
+      "practical": "追踪实际现金流和 LP 资金安排。",
+      "plain": "基金按需要叫投资人把钱打进来。",
+      "related": [
+        "commitment",
+        "dpi"
+      ]
+    },
+    {
+      "id": "invested-capital",
+      "category": "funds",
+      "term": "Invested Capital",
+      "fullName": "Invested Capital",
+      "zh": "已用于投资的资本，具体范围依报告口径定义。",
+      "practical": "测算项目回报并区分缴款与实际投出金额。",
+      "plain": "已经真正投到项目里的钱。",
+      "related": [
+        "commitment",
+        "moic"
+      ],
+      "note": "基金层面的 paid-in capital 可含费用和待投资现金，不应与项目投入资本混用。"
+    },
+    {
+      "id": "management-fee",
+      "category": "funds",
+      "term": "Management Fee",
+      "fullName": "Management Fee",
+      "zh": "管理费，支付给管理人的持续性费用。",
+      "practical": "评估 LP 净回报与管理成本。",
+      "plain": "基金每年给管理团队的运营费用。",
+      "related": [
+        "gp",
+        "carry"
+      ],
+      "note": "费率基数可能从承诺资本切换为已投资资本。"
+    },
+    {
+      "id": "carry",
+      "category": "funds",
+      "term": "Carry",
+      "fullName": "Carried Interest",
+      "zh": "业绩报酬，GP 按协议分享投资利润。",
+      "practical": "测算净回报和管理人激励。",
+      "plain": "投资赚钱后管理人分到的一部分收益。",
+      "related": [
+        "gp",
+        "clawback"
+      ],
+      "note": "分配瀑布、门槛和追补机制影响实际金额。",
+      "aliases": [
+        "Carried Interest"
+      ]
+    },
+    {
+      "id": "clawback",
+      "category": "funds",
+      "term": "Clawback",
+      "fullName": "Clawback",
+      "zh": "追索机制，按协议收回此前多分配给管理人的业绩报酬。",
+      "practical": "审查基金整体亏损后 LP 的保护是否可执行。",
+      "plain": "前面分多了，后来要还回来。",
+      "related": [
+        "carry",
+        "distribution"
+      ]
+    },
+    {
+      "id": "vintage",
+      "category": "funds",
+      "term": "Vintage",
+      "fullName": "Vintage Year",
+      "zh": "基金年份，通常按成立或首笔投资年份归类。",
+      "practical": "比较同市场环境下不同基金的表现。",
+      "plain": "这只基金属于哪一年的投资批次。",
+      "related": [
+        "fund",
+        "j-curve"
+      ],
+      "note": "年份认定可能因数据库或机构而异。",
+      "aliases": [
+        "Vintage Year"
+      ]
+    },
+    {
+      "id": "nav",
+      "category": "funds",
+      "term": "NAV",
+      "fullName": "Net Asset Value",
+      "zh": "资产净值，基金资产公允价值减负债。",
+      "practical": "衡量未退出投资的当前估值。",
+      "plain": "手上还持有的东西现在估值多少。",
+      "related": [
+        "rvpi",
+        "tvpi"
+      ],
+      "note": "未实现 NAV 依赖估值模型，不等同可立即收到的现金。"
+    },
+    {
+      "id": "dpi",
+      "category": "funds",
+      "term": "DPI",
+      "fullName": "Distributions to Paid-In Capital",
+      "zh": "已分配资本倍数，累计已分配金额除以累计实缴资本。",
+      "practical": "判断 LP 已拿回多少真实现金或可分配证券。",
+      "plain": "投进去的钱，有多少已经回到手里。",
+      "related": [
+        "tvpi",
+        "rvpi"
+      ],
+      "note": "DPI 侧重已实现分配；分配中非现金资产的计价与税费口径需核对。"
+    },
+    {
+      "id": "rvpi",
+      "category": "funds",
+      "term": "RVPI",
+      "fullName": "Residual Value to Paid-In Capital",
+      "zh": "剩余价值倍数，基金剩余净值除以累计实缴资本。",
+      "practical": "判断未退出投资对总回报的贡献。",
+      "plain": "还没卖出的资产目前估值是投入的几倍。",
+      "related": [
+        "dpi",
+        "tvpi"
+      ],
+      "note": "RVPI 依赖剩余资产估值，不等于已兑现收益。"
+    },
+    {
+      "id": "tvpi",
+      "category": "funds",
+      "term": "TVPI",
+      "fullName": "Total Value to Paid-In Capital",
+      "zh": "总价值倍数，已分配价值加剩余价值后除以累计实缴资本。",
+      "practical": "评价基金已实现与未实现的合计回报。",
+      "plain": "拿回来的加上还持有的，一共值投入的几倍。",
+      "related": [
+        "dpi",
+        "rvpi"
+      ],
+      "note": "同口径下 TVPI=DPI+RVPI；TVPI 高而 DPI 低表示回报多未兑现。"
+    },
+    {
+      "id": "j-curve",
+      "category": "funds",
+      "term": "J-Curve",
+      "fullName": "J-Curve",
+      "zh": "J 曲线，基金早期受费用和未实现投资影响，回报先低后升的常见轨迹。",
+      "practical": "理解新基金初期净回报为何偏低。",
+      "plain": "先花钱布局，之后才可能逐步收成。",
+      "related": [
+        "vintage",
+        "tvpi"
+      ],
+      "note": "不是所有基金都遵循相同轨迹，不能保证未来回升。"
+    },
+    {
+      "id": "distribution",
+      "category": "funds",
+      "term": "Distribution",
+      "fullName": "Distribution",
+      "zh": "基金向投资者返还现金或证券的分配。",
+      "practical": "追踪 LP 实际回款和基金流动性。",
+      "plain": "基金把钱或资产分给投资人。",
+      "related": [
+        "dpi",
+        "capital-call"
+      ]
+    },
+    {
+      "id": "saas",
+      "category": "software",
+      "term": "SaaS",
+      "fullName": "Software as a Service",
+      "zh": "软件即服务，通常通过网络按订阅或使用量提供软件。",
+      "practical": "分析经常性收入、留存和交付成本。",
+      "plain": "不用自己安装维护，按服务方式使用软件。",
+      "related": [
+        "arr",
+        "nrr"
+      ]
+    },
+    {
+      "id": "arr",
+      "category": "software",
+      "term": "ARR",
+      "fullName": "Annual Recurring Revenue",
+      "zh": "年度经常性收入，某时点活跃经常性合同价值的年化指标。",
+      "practical": "衡量订阅业务规模和未来收入基础。",
+      "plain": "把当前稳定订阅金额换算成一年。",
+      "related": [
+        "mrr",
+        "revenue"
+      ],
+      "note": "ARR 不是会计确认收入；是否含使用量、服务费与短约必须核对。"
+    },
+    {
+      "id": "mrr",
+      "category": "software",
+      "term": "MRR",
+      "fullName": "Monthly Recurring Revenue",
+      "zh": "月度经常性收入，某月经常性订阅金额。",
+      "practical": "追踪订阅业务近期增长与变化。",
+      "plain": "这个月可重复获得的订阅费。",
+      "related": [
+        "arr",
+        "revenue-churn"
+      ],
+      "note": "简单年化 ARR≈MRR×12，但季节性和合同结构会造成差异。"
+    },
+    {
+      "id": "nrr",
+      "category": "software",
+      "term": "NRR",
+      "fullName": "Net Revenue Retention",
+      "zh": "净收入留存率，期初客户群收入经增购、降级与流失调整后的比例。",
+      "practical": "判断存量客户能否持续扩张。",
+      "plain": "不靠新客户，老客户今年比去年多付还是少付。",
+      "related": [
+        "grr",
+        "expansion-revenue",
+        "revenue-churn"
+      ],
+      "note": "常见公式：(期初 ARR+增购－降级－流失)÷期初 ARR；不含新客户，不同公司口径可能不同。"
+    },
+    {
+      "id": "grr",
+      "category": "software",
+      "term": "GRR",
+      "fullName": "Gross Revenue Retention",
+      "zh": "总收入留存率，期初客户群收入扣除降级和流失后的比例。",
+      "practical": "衡量原有收入的基础保留能力。",
+      "plain": "不算老客户增购，只看原来的收入留住多少。",
+      "related": [
+        "nrr",
+        "revenue-churn"
+      ],
+      "note": "常见公式：(期初 ARR－降级－流失)÷期初 ARR；通常不超过 100%。"
+    },
+    {
+      "id": "logo-churn",
+      "category": "software",
+      "term": "Logo Churn",
+      "fullName": "Logo Churn",
+      "zh": "客户数流失率，流失客户数量占期初客户数量的比例。",
+      "practical": "看客户关系是否稳定，尤其是中小客户群。",
+      "plain": "原来有多少客户离开了。",
+      "related": [
+        "revenue-churn",
+        "nrr"
+      ],
+      "note": "客户数流失与收入流失可能方向不同。"
+    },
+    {
+      "id": "revenue-churn",
+      "category": "software",
+      "term": "Revenue Churn",
+      "fullName": "Revenue Churn",
+      "zh": "收入流失率，因客户取消或降级损失的经常性收入比例。",
+      "practical": "识别留存质量与增长所需的新获客压力。",
+      "plain": "原有订阅钱丢了多少。",
+      "related": [
+        "logo-churn",
+        "grr"
+      ],
+      "note": "需说明是否包含降级、是否扣除增购以及观察期间。"
+    },
+    {
+      "id": "expansion-revenue",
+      "category": "software",
+      "term": "Expansion Revenue",
+      "fullName": "Expansion Revenue",
+      "zh": "存量客户增购、升级或用量增长产生的收入。",
+      "practical": "验证交叉销售和产品价值深化。",
+      "plain": "老客户用得更多，付得更多。",
+      "related": [
+        "nrr",
+        "revenue-synergy"
+      ]
+    },
+    {
+      "id": "cac",
+      "category": "software",
+      "term": "CAC",
+      "fullName": "Customer Acquisition Cost",
+      "zh": "客户获取成本，获取一个新客户所需的销售营销投入。",
+      "practical": "评估获客效率和增长可持续性。",
+      "plain": "拉来一位新客户要花多少钱。",
+      "related": [
+        "ltv",
+        "cac-payback"
+      ],
+      "note": "常见口径：相关销售营销费用÷新增客户数；归因与期间匹配很重要。"
+    },
+    {
+      "id": "ltv",
+      "category": "software",
+      "term": "LTV",
+      "fullName": "Lifetime Value",
+      "zh": "客户生命周期价值，客户关系期间预计带来的经济价值。",
+      "practical": "与 CAC 比较评估单位经济性。",
+      "plain": "一位客户在合作期间预计能贡献多少。",
+      "related": [
+        "cac",
+        "ltv-cac"
+      ],
+      "note": "应尽量用毛利或贡献利润计算，并说明流失和折现假设。"
+    },
+    {
+      "id": "cac-payback",
+      "category": "software",
+      "term": "CAC Payback",
+      "fullName": "CAC Payback Period",
+      "zh": "获客成本回收期，用客户贡献毛利回收 CAC 所需时间。",
+      "practical": "判断增长占用现金多久。",
+      "plain": "拉来客户花的钱，几个月能赚回来。",
+      "related": [
+        "cac",
+        "gross-margin"
+      ],
+      "note": "常见简式：CAC÷每客户月度贡献毛利；新增收入爬坡会改变结果。"
+    },
+    {
+      "id": "ltv-cac",
+      "category": "software",
+      "term": "LTV/CAC",
+      "fullName": "LTV to CAC Ratio",
+      "zh": "客户生命周期价值与获客成本之比。",
+      "practical": "判断获客投入是否具有合理回报空间。",
+      "plain": "一个客户能带来的价值是拉客成本的几倍。",
+      "related": [
+        "ltv",
+        "cac"
+      ],
+      "note": "高比值也可能由过低的增长投入或乐观的 LTV 假设造成。"
+    },
+    {
+      "id": "acv",
+      "category": "software",
+      "term": "ACV",
+      "fullName": "Annual Contract Value",
+      "zh": "年度合同价值，将单份合同价值标准化为每年金额。",
+      "practical": "比较不同合同期限的销售效率。",
+      "plain": "一份合同平均每年值多少钱。",
+      "related": [
+        "tcv",
+        "arr"
+      ],
+      "note": "一次性费用是否计入 ACV 依企业口径而异。"
+    },
+    {
+      "id": "tcv",
+      "category": "software",
+      "term": "TCV",
+      "fullName": "Total Contract Value",
+      "zh": "合同总价值，合同期内约定的总金额。",
+      "practical": "判断大客户订单规模和未来履约义务。",
+      "plain": "整份合同从头到尾一共多少钱。",
+      "related": [
+        "acv",
+        "revenue"
+      ],
+      "note": "签约额不等于已经确认的收入，也可能存在可取消条款。"
+    },
+    {
+      "id": "arpu",
+      "category": "software",
+      "term": "ARPU",
+      "fullName": "Average Revenue per User",
+      "zh": "每用户平均收入，期间收入除以平均用户数。",
+      "practical": "分析定价、客户结构和增购趋势。",
+      "plain": "平均每位用户贡献多少收入。",
+      "related": [
+        "revenue",
+        "expansion-revenue"
+      ],
+      "note": "用户可指账号、客户或付费席位，须统一分母。"
+    },
+    {
+      "id": "rule-of-40",
+      "category": "software",
+      "term": "Rule of 40",
+      "fullName": "Rule of 40",
+      "zh": "40 法则，软件公司收入增长率与利润率之和的经验指标。",
+      "practical": "快速平衡增长速度与盈利质量。",
+      "plain": "增长和盈利加起来够不够强。",
+      "related": [
+        "arr",
+        "operating-margin"
+      ],
+      "note": "不是会计准则；利润率可选 EBITDA、FCF 等，跨公司比较先统一口径。"
+    },
+    {
+      "id": "ai",
+      "category": "software",
+      "term": "AI",
+      "fullName": "Artificial Intelligence",
+      "zh": "人工智能，让系统执行预测、生成或决策等任务的技术集合。",
+      "practical": "投资时评估数据、模型能力、商业落地与治理风险。",
+      "plain": "让机器完成原本需要智能判断的任务。",
+      "related": [
+        "llm",
+        "inference-cost"
+      ]
+    },
+    {
+      "id": "llm",
+      "category": "software",
+      "term": "LLM",
+      "fullName": "Large Language Model",
+      "zh": "大语言模型，从大量数据学习语言模式的模型。",
+      "practical": "评估模型差异化、应用壁垒与推理成本。",
+      "plain": "能理解和生成文字等内容的大模型。",
+      "related": [
+        "ai",
+        "rag"
+      ]
+    },
+    {
+      "id": "inference-cost",
+      "category": "software",
+      "term": "Inference Cost",
+      "fullName": "Inference Cost",
+      "zh": "模型推理成本，运行已训练模型完成请求的资源开销。",
+      "practical": "判断 AI 产品毛利、定价和规模化能力。",
+      "plain": "每次让模型回答问题要花多少钱。",
+      "related": [
+        "llm",
+        "gross-margin"
+      ],
+      "note": "成本与模型、硬件、批量、缓存和输入输出长度有关。"
+    },
+    {
+      "id": "rag",
+      "category": "software",
+      "term": "RAG",
+      "fullName": "Retrieval-Augmented Generation",
+      "zh": "检索增强生成，先检索外部资料再辅助模型生成回答。",
+      "practical": "评估企业知识应用的可追溯性和更新成本。",
+      "plain": "回答前先查资料，再组织答案。",
+      "related": [
+        "llm",
+        "ai"
+      ],
+      "note": "检索到资料不保证回答正确，仍需评估引用与权限。"
+    },
+    {
+      "id": "m-a",
+      "category": "mandA",
+      "term": "M&A",
+      "fullName": "Mergers and Acquisitions",
+      "zh": "并购，企业合并或收购控制权与资产的活动。",
+      "practical": "识别交易目的、定价、整合和反垄断风险。",
+      "plain": "把公司或业务买进来、合在一起。",
+      "related": [
+        "buyout",
+        "pmi"
+      ],
+      "note": "合并与收购法律结构不同，统称不替代具体分析。",
+      "aliases": [
+        "Merger and Acquisition"
+      ]
+    },
+    {
+      "id": "pmi",
+      "category": "mandA",
+      "term": "PMI",
+      "fullName": "Post-Merger Integration",
+      "zh": "并购后整合，将人员、系统、流程和业务计划落地。",
+      "practical": "检验协同能否兑现及整合成本、文化风险。",
+      "plain": "买完之后，把两边真正协同运转。",
+      "related": [
+        "m-a",
+        "synergy"
+      ]
+    },
+    {
+      "id": "synergy",
+      "category": "mandA",
+      "term": "Synergy",
+      "fullName": "Synergy",
+      "zh": "协同效应，两项业务结合后的增量经济价值。",
+      "practical": "验证收购溢价是否有可执行的回报来源。",
+      "plain": "合在一起比各自单干多创造的价值。",
+      "related": [
+        "revenue-synergy",
+        "cost-synergy"
+      ],
+      "note": "协同要扣除实现成本、时间和执行风险。"
+    },
+    {
+      "id": "revenue-synergy",
+      "category": "mandA",
+      "term": "Revenue Synergy",
+      "fullName": "Revenue Synergy",
+      "zh": "收入协同，交叉销售、渠道共享等带来的增量收入。",
+      "practical": "测算战略收购的增长潜力。",
+      "plain": "两家公司一起卖，卖得比以前更多。",
+      "related": [
+        "synergy",
+        "cdd"
+      ],
+      "note": "须区分新增销售与原有业务转移。"
+    },
+    {
+      "id": "cost-synergy",
+      "category": "mandA",
+      "term": "Cost Synergy",
+      "fullName": "Cost Synergy",
+      "zh": "成本协同，通过采购、系统或组织优化节省的成本。",
+      "practical": "评估整合后利润改善与执行时间。",
+      "plain": "合并后重复花的钱少了。",
+      "related": [
+        "synergy",
+        "integration-cost"
+      ],
+      "note": "一次性整合费用和服务质量影响应同时测算。"
+    },
+    {
+      "id": "integration-cost",
+      "category": "mandA",
+      "term": "Integration Cost",
+      "fullName": "Integration Cost",
+      "zh": "整合成本，实现并购协同所需的一次性或持续性费用。",
+      "practical": "把协同净收益和现金流时间算完整。",
+      "plain": "为了把两家公司接起来要付的钱。",
+      "related": [
+        "pmi",
+        "cost-synergy"
+      ]
+    },
+    {
+      "id": "earn-out",
+      "category": "mandA",
+      "term": "Earn-out",
+      "fullName": "Earn-out",
+      "zh": "或有对价，部分收购价款取决于未来业绩或里程碑。",
+      "practical": "缓解买卖双方对未来价值判断差异。",
+      "plain": "以后达到目标，再补付一部分收购款。",
+      "related": [
+        "spa",
+        "equity-value"
+      ],
+      "note": "指标、会计政策、控制权与争议解决机制需明确。"
+    },
+    {
+      "id": "escrow",
+      "category": "mandA",
+      "term": "Escrow",
+      "fullName": "Escrow",
+      "zh": "托管安排，将部分资金或资产交由第三方按条件释放。",
+      "practical": "为赔偿、价格调整或交割义务提供保障。",
+      "plain": "先把一部分钱放在中间保管。",
+      "related": [
+        "indemnity",
+        "closing"
+      ]
+    },
+    {
+      "id": "representations-and-warranties",
+      "category": "mandA",
+      "term": "Representations and Warranties",
+      "fullName": "Representations and Warranties",
+      "zh": "陈述与保证，交易方对特定事实和状态作出的合同声明。",
+      "practical": "分配信息风险并界定违约救济。",
+      "plain": "卖方对公司情况作出有法律后果的说明。",
+      "related": [
+        "disclosure-schedule",
+        "indemnity"
+      ]
+    },
+    {
+      "id": "indemnity",
+      "category": "mandA",
+      "term": "Indemnity",
+      "fullName": "Indemnity",
+      "zh": "赔偿条款，约定特定损失由哪一方承担。",
+      "practical": "测算已识别风险、索赔上限和期限。",
+      "plain": "出了约定的问题，谁来承担损失。",
+      "related": [
+        "spa",
+        "escrow"
+      ]
+    },
+    {
+      "id": "asset-deal",
+      "category": "mandA",
+      "term": "Asset Deal",
+      "fullName": "Asset Deal",
+      "zh": "资产交易，购买约定资产及可能承接的负债。",
+      "practical": "比较税务、牌照、员工转移和责任承接。",
+      "plain": "挑选业务资产来买。",
+      "related": [
+        "share-deal",
+        "carve-out"
+      ],
+      "note": "责任是否随资产转移取决于法律及合同安排。"
+    },
+    {
+      "id": "share-deal",
+      "category": "mandA",
+      "term": "Share Deal",
+      "fullName": "Share Deal",
+      "zh": "股权交易，购买持有目标公司权益的证券。",
+      "practical": "分析控制权转移、历史责任与交割结构。",
+      "plain": "买公司股份，从而拥有公司。",
+      "related": [
+        "asset-deal",
+        "spa"
+      ]
+    },
+    {
+      "id": "carve-out",
+      "category": "mandA",
+      "term": "Carve-out",
+      "fullName": "Carve-out",
+      "zh": "业务剥离，从集团中分离部分业务或资产出售。",
+      "practical": "评估独立运营能力、过渡服务和分拆成本。",
+      "plain": "把大公司的一块业务切出来单卖。",
+      "related": [
+        "asset-deal",
+        "pmi"
+      ]
+    },
+    {
+      "id": "roll-up",
+      "category": "mandA",
+      "term": "Roll-up",
+      "fullName": "Roll-up",
+      "zh": "平台式整合，连续收购同一领域的多家公司。",
+      "practical": "评估规模效应、整合负担和估值套利风险。",
+      "plain": "把许多小公司逐步并成一个平台。",
+      "related": [
+        "m-a",
+        "pmi"
+      ]
+    },
+    {
+      "id": "strategic-alliance",
+      "category": "mandA",
+      "term": "Strategic Alliance",
+      "fullName": "Strategic Alliance",
+      "zh": "战略联盟，企业在特定目标上合作但不必共同设立公司。",
+      "practical": "测试合作是否带来渠道、技术或供应链价值。",
+      "plain": "不一定合资，也可以约定一起做事。",
+      "related": [
+        "jv",
+        "cvc"
+      ]
+    },
+    {
+      "id": "change-of-control",
+      "category": "mandA",
+      "term": "Change of Control",
+      "fullName": "Change of Control",
+      "zh": "控制权变更，因股权或治理安排变化导致控制主体改变。",
+      "practical": "检查融资、客户合同和监管审批中的触发条款。",
+      "plain": "公司换了实际掌舵的人。",
+      "related": [
+        "majority-investment",
+        "spa"
+      ],
+      "note": "具体触发标准以合同和法律定义为准。"
+    },
+    {
+      "id": "ipo",
+      "category": "markets",
+      "term": "IPO",
+      "fullName": "Initial Public Offering",
+      "zh": "首次公开发行，公司第一次向公众发行股票并上市。",
+      "practical": "作为退出渠道评估市场窗口、合规和锁定期。",
+      "plain": "公司第一次走向公开股票市场。",
+      "related": [
+        "liquidity",
+        "secondary-offering"
+      ],
+      "note": "上市不保证早期股东立即能卖出。"
+    },
+    {
+      "id": "pipe",
+      "category": "markets",
+      "term": "PIPE",
+      "fullName": "Private Investment in Public Equity",
+      "zh": "上市公司私募融资，向特定投资者发行证券。",
+      "practical": "评估发行折价、稀释和流动性限制。",
+      "plain": "上市公司私下向特定投资人融资。",
+      "related": [
+        "ipo",
+        "dilution"
+      ],
+      "note": "证券类型与锁定安排因交易而异。"
+    },
+    {
+      "id": "secondary-offering",
+      "category": "markets",
+      "term": "Secondary Offering",
+      "fullName": "Secondary Offering",
+      "zh": "上市后再次发行或出售证券的交易。",
+      "practical": "区分公司增发募资与老股东减持。",
+      "plain": "已经上市后再卖一批股票。",
+      "related": [
+        "ipo",
+        "primary-investment"
+      ],
+      "note": "若为老股东出售，公司通常不获得该部分资金。"
+    },
+    {
+      "id": "liquidity",
+      "category": "markets",
+      "term": "Liquidity",
+      "fullName": "Liquidity",
+      "zh": "流动性，资产在合理时间内以接近公允价格变现的能力。",
+      "practical": "判断退出可行性和资产负债错配。",
+      "plain": "想卖时能不能顺利卖掉。",
+      "related": [
+        "ipo",
+        "distribution"
+      ]
+    },
+    {
+      "id": "volatility",
+      "category": "markets",
+      "term": "Volatility",
+      "fullName": "Volatility",
+      "zh": "波动率，收益或价格变动幅度的统计度量。",
+      "practical": "评估公开市场价格不确定性和仓位。",
+      "plain": "价格上下跳动得有多厉害。",
+      "related": [
+        "beta",
+        "market-risk"
+      ],
+      "note": "波动率不等同永久损失概率。"
+    },
+    {
+      "id": "beta",
+      "category": "markets",
+      "term": "Beta",
+      "fullName": "Beta",
+      "zh": "贝塔，证券收益相对市场收益变动的敏感度。",
+      "practical": "估计系统性风险及股权资本成本。",
+      "plain": "大盘动 1，某股票大约跟着动多少。",
+      "related": [
+        "market-risk",
+        "cost-of-equity"
+      ],
+      "note": "历史 Beta 对未上市公司需谨慎估计，且会随资本结构变化。"
+    },
+    {
+      "id": "market-risk",
+      "category": "markets",
+      "term": "Market Risk",
+      "fullName": "Market Risk",
+      "zh": "市场风险，整体市场价格、利率等变动造成的损失可能。",
+      "practical": "设定组合敞口与压力情景。",
+      "plain": "大环境变化让投资一起受影响。",
+      "related": [
+        "beta",
+        "volatility"
+      ]
+    },
+    {
+      "id": "credit-risk",
+      "category": "markets",
+      "term": "Credit Risk",
+      "fullName": "Credit Risk",
+      "zh": "信用风险，债务人或交易对手无法履约造成损失的可能。",
+      "practical": "评估贷款、应收款与交易对手风险。",
+      "plain": "该还钱的人可能还不上。",
+      "related": [
+        "debt-ebitda",
+        "interest-coverage"
+      ]
+    },
+    {
+      "id": "concentration-risk",
+      "category": "markets",
+      "term": "Concentration Risk",
+      "fullName": "Concentration Risk",
+      "zh": "集中度风险，资金、客户或收入过度依赖少数对象。",
+      "practical": "识别组合、客户或供应商单点冲击。",
+      "plain": "鸡蛋放在太少几个篮子里。",
+      "related": [
+        "market-risk",
+        "revenue"
+      ]
+    },
+    {
+      "id": "downside-protection",
+      "category": "markets",
+      "term": "Downside Protection",
+      "fullName": "Downside Protection",
+      "zh": "下行保护，通过条款或结构限制不利情景损失。",
+      "practical": "设计优先权、担保、价格机制或止损边界。",
+      "plain": "行情变坏时给投资加缓冲垫。",
+      "related": [
+        "liquidation-preference",
+        "indemnity"
+      ],
+      "note": "保护不保证本金安全，须检验执行条件和对手信用。"
+    },
+    {
+      "id": "var",
+      "category": "markets",
+      "term": "VaR",
+      "fullName": "Value at Risk",
+      "zh": "风险价值，在特定期限和置信水平下的损失分位数。",
+      "practical": "监测交易组合在常规市场条件下的潜在损失。",
+      "plain": "按既定概率估算可能亏到什么程度。",
+      "related": [
+        "volatility",
+        "market-risk"
+      ],
+      "note": "VaR 不表示最大损失；尾部损失需另做压力测试。"
+    },
+    {
+      "id": "fx-risk",
+      "category": "markets",
+      "term": "FX Risk",
+      "fullName": "Foreign Exchange Risk",
+      "zh": "外汇风险，汇率变化对现金流或资产价值的影响。",
+      "practical": "跨境投资时评估币种错配和对冲成本。",
+      "plain": "汇率一变，换算后的收益也变。",
+      "related": [
+        "market-risk",
+        "fcf"
+      ]
+    }
+  ]
+}

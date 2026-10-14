@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="投资术语">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="150 个常用投资术语、8 个分类与 6 张交互式图解。离线也能查阅的投资知识手册。">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Investment Glossary｜投资术语知识库</title>
+  <script src="./diagrams.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand" aria-label="Investment Glossary">
+        <span class="brand-mark" aria-hidden="true">IG<span class="brand-mark-dot"></span></span>
+        <span class="brand-copy"><strong>Investment Glossary</strong><small>投资术语知识库</small></span>
+      </div>
+      <div class="header-actions">
+        <label class="theme-label" for="theme-select">外观</label>
+        <select id="theme-select" aria-label="外观模式">
+          <option value="system">跟随系统</option>
+          <option value="light">浅色</option>
+          <option value="dark">深色</option>
+        </select>
+        <button id="install-btn" class="icon-button install-btn" type="button" aria-label="安装到主屏幕" title="安装到主屏幕">↗</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="discover-view" class="view" aria-labelledby="discover-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> INVESTMENT FIELD GUIDE · V1</p>
+            <h1 id="discover-title">复杂概念，<br><em>讲得明白。</em></h1>
+            <p class="hero-lede">从交易文件到现金流，从基金回报到 AI 商业模式。用准确、易懂的解释，快速建立投资判断的共同语言。</p>
+            <div class="hero-metrics" aria-label="知识库内容">
+              <span><strong id="hero-term-count">150</strong><small>精选术语</small></span>
+              <span><strong>8</strong><small>知识分类</small></span>
+              <span><strong>6</strong><small>交互图解</small></span>
+            </div>
+          </div>
+          <div class="hero-graphic" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="graphic-center"><span>EV</span><small>企业价值</small></div>
+            <span class="graphic-pill pill-one">IRR</span><span class="graphic-pill pill-two">ARR</span><span class="graphic-pill pill-three">DPI</span>
+          </div>
+        </div>
+
+        <div class="section-heading search-heading"><div><p class="eyebrow">EXPLORE THE LIBRARY</p><h2>查术语</h2></div><p>从一个概念，连到整张知识网络。</p></div>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg>
+          <label class="sr-only" for="search-input">搜索缩写、英文、中文或别名</label>
+          <input id="search-input" type="search" inputmode="search" autocomplete="off" placeholder="搜索缩写、英文、中文或别名…">
+          <kbd class="search-shortcut">/</kbd>
+        </div>
+        <div id="category-chips" class="chip-row" role="group" aria-label="按分类筛选"></div>
+        <div class="result-bar"><span id="result-count" aria-live="polite">加载词库中…</span><span id="sort-label">按分类编排</span></div>
+        <div id="term-grid" class="term-grid"></div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">⌕</span><h3>还没有匹配的术语</h3><p>试试英文缩写、完整名称，或换一个分类。</p><button id="clear-search" type="button" class="text-button">清除筛选</button></div>
+      </section>
+
+      <section id="learn-view" class="view" aria-labelledby="learn-title" hidden>
+        <div class="view-intro"><p class="eyebrow">VISUAL LEARNING</p><h1 id="learn-title">用图，<em>看懂投资。</em></h1><p>六张可交互图解，把流程、结构和公式放到真实决策场景中。点击蓝色节点可直接阅读术语。</p></div>
+        <div class="learning-panel">
+          <div class="panel-heading"><div><p class="eyebrow">A LITTLE EVERY DAY</p><h2>本次推荐 5 个</h2></div><button id="refresh-recs" class="text-button" type="button">换一组 ↗</button></div>
+          <p id="progress-copy" class="progress-copy" aria-live="polite"></p>
+          <div class="progress-track" role="progressbar" aria-label="已掌握术语进度" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><span id="progress-fill"></span></div>
+          <div id="recommendations" class="recommendations"></div>
+        </div>
+        <div class="section-heading diagram-heading"><div><p class="eyebrow">THE BIG PICTURE</p><h2>六张结构图解</h2></div><p>蓝色节点可点，示例数据均为演示。</p></div>
+        <div id="diagram-grid" class="diagram-grid"></div>
+      </section>
+
+      <section id="saved-view" class="view" aria-labelledby="saved-title" hidden>
+        <div class="view-intro compact"><p class="eyebrow">YOUR READING DESK</p><h1 id="saved-title">我的<em>收藏。</em></h1><p>把重要概念留在手边。收藏与学习进度只保存在当前浏览器。</p></div>
+        <div class="search-box saved-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><label class="sr-only" for="saved-search-input">搜索已收藏术语</label><input id="saved-search-input" type="search" placeholder="搜索已收藏术语…"></div>
+        <div class="result-bar"><span id="saved-count" aria-live="polite"></span><span>本机保存</span></div>
+        <div id="saved-grid" class="term-grid"></div>
+        <div id="saved-empty" class="empty-state" hidden><span aria-hidden="true">♡</span><h3>收藏夹还是空的</h3><p>遇到想反复查阅的概念，点卡片上的收藏按钮即可。</p><button id="explore-terms" type="button" class="text-button">去查术语 →</button></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>INVESTMENT GLOSSARY · V1</span><p>概念学习工具，不构成投资建议。财务与基金指标须核对具体合同和报告口径。</p><a href="./sources.html">定义口径与参考来源 ↗</a></footer>
+  </div>
+
+  <nav class="bottom-nav" aria-label="主导航">
+    <button type="button" data-view="discover" aria-current="page"><span class="nav-icon" aria-hidden="true">⌕</span><span>查术语</span></button>
+    <button type="button" data-view="learn"><span class="nav-icon" aria-hidden="true">◇</span><span>学流程</span></button>
+    <button type="button" data-view="saved"><span class="nav-icon" aria-hidden="true">♡</span><span>我的收藏</span></button>
+  </nav>
+
+  <dialog id="term-dialog" aria-labelledby="dialog-term">
+    <div class="dialog-frame">
+      <div class="dialog-top"><span id="dialog-category" class="dialog-category"></span><button id="dialog-close" type="button" class="icon-button close-button" aria-label="关闭词条详情">×</button></div>
+      <div id="dialog-body"></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="no-script">本知识库需要启用 JavaScript 才能搜索和浏览词条。</p></noscript>
+</body>
+</html>
