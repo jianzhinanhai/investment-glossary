@@ -44,6 +44,8 @@ Liquidation Preference|Liquidation Preference|清算优先权，约定优先股�
 
 # valuation|估值与投资回报|把企业价值、股权价值与资金回报放到同一张图上。
 EV|Enterprise Value|企业价值，衡量经营资产对全部资本提供者的价值。|比较不同债务结构的公司，并作为 EV 倍数分子。|整盘生意值多少钱。|Equity Value,Net Debt|常用桥接：EV≈股权价值+有息债务及类似项目－现金及非经营资产；少数股东权益等视口径调整。|Enterprise Value
+Fair Value|Fair Value|公允价值，计量日市场参与者在有序交易中出售资产或转移负债的价格。|核查交易估值、金融工具计量和并购资产重估的假设。|按当前市场条件，这项资产或负债值多少。|Fair Value Hierarchy,FVTPL,PPA|公允价值是市场参与者视角的退出价格，不必等于账面价值或企业内部使用价值。
+Fair Value Hierarchy|Fair Value Hierarchy|公允价值层级，按估值输入值的可观察程度分为第一、第二和第三层级。|阅读估值附注时判断价格对模型与不可观察假设的依赖。|越靠第三层级，越需要检查估值假设。|Fair Value,Goodwill|第一层级是相同项目活跃市场未调整报价；第二层级为其他可观察输入；第三层级含重大不可观察输入。|Level 1,Level 2,Level 3,公允价值层级
 Equity Value|Equity Value|股权价值，归属于普通及相关股权持有人的价值。|确定收购股权报价和每股价格。|扣掉净债务等之后股东手里的价值。|EV,Net Debt|EV 与股权价值不能混用；桥接项按交易定义核对。
 Net Debt|Net Debt|净债务，通常为有息债务减可用现金。|从企业价值桥接到股权价值并设交割价格调整。|欠的债减去手头可动用的现金。|EV,Equity Value|现金是否受限、租赁负债和类债务项目需在交易文件中约定。
 EV/EBITDA|Enterprise Value to EBITDA|企业价值与 EBITDA 之比的估值倍数。|同业比较时观察经营价值相对盈利的定价。|买整家公司相当于多少年的 EBITDA。|EV,EBITDA|不同企业的资本开支、会计政策和一次性项目仍会造成差异。
@@ -53,6 +55,9 @@ DCF|Discounted Cash Flow|现金流折现法，把未来现金流折算为今天�
 WACC|Weighted Average Cost of Capital|加权平均资本成本，债务与股权资金成本的加权值。|用作与 FCFF 风险及资本结构匹配的折现率。|公司筹集各种资金的综合成本。|DCF,Cost of Equity,Cost of Debt|常见税后形式：WACC=E/(D+E)×Re+D/(D+E)×Rd×(1－税率)。
 Terminal Value|Terminal Value|终值，预测期末之后持续经营现金流的估计价值。|检查 DCF 是否过度依赖远期假设。|把预测期后很长一段时间的价值合成一个数。|DCF,Perpetuity Growth Rate|永续增长法要求折现率大于长期增长率。
 IRR|Internal Rate of Return|内部收益率，使一系列现金流净现值等于零的折现率。|比较不同时间分布的投资回报，并与资金成本比较。|把钱赚回来有多快，也计入等待时间。|MOIC,NPV|IRR 是资金加权、通常年化；非正常现金流可能有多个或无有效 IRR，未实现价值依赖估值。
+CAGR|Compound Annual Growth Rate|复合年增长率，把一段时期的总增长折算为每年的等效增长率。|比较不同持有期公司的收入、利润或市场规模增长。|假设每年平稳增长，平均一年长了多少。|Revenue,YoY,TTM|常用公式：(期末值÷期初值)^(1/年数)－1；要求期初与期末口径可比且期初为正，不展示中途波动。|复合年增长率
+TTM|Trailing Twelve Months|最近连续十二个月的实际业绩区间。|做估值倍数和增长比较时减少财年截止日差异。|从现在往前数十二个月看业绩。|Revenue,EBITDA,YoY|LTM 常作同义词；需区分已披露的滚动十二个月与预测未来十二个月 NTM。|LTM,Last Twelve Months,最近十二个月
+YoY|Year over Year|同比，当前期间相对上一年同一期间的变化。|评估收入或利润增长是否受季节性影响。|今年这一季和去年同一季相比。|CAGR,Revenue,TTM|同比增长率常用 (本期－上年同期)÷上年同期；上年同期为零或负数时百分比解释需谨慎。|Year-on-Year,同比
 MOIC|Multiple on Invested Capital|投入资本倍数，投资价值或回款相对投入资本的倍数。|快速看一笔投资共收回了投入的几倍。|投 1 元最终值 2 元，就是 2.0 倍。|IRR,DPI|MOIC 不反映持有时间；须注明税费前后及是否包含未实现价值。
 ROI|Return on Investment|投资回报率，收益相对投资成本的比例。|做单项目粗略收益比较。|赚的钱占最初投入的百分比。|MOIC,IRR|ROI 通常不处理现金流时间；定义中的收益和成本范围要说清。
 NPV|Net Present Value|净现值，未来现金流现值减初始投资。|判断项目在给定折现率下是否创造价值。|折到今天后，收入比支出多多少。|DCF,IRR|NPV>0 仅说明在所用折现率与假设下创造价值。
@@ -69,14 +74,27 @@ Perpetuity Growth Rate|Perpetuity Growth Rate|永续增长率，终值模型中�
 Sensitivity Analysis|Sensitivity Analysis|敏感性分析，改变关键假设观察估值或回报变化。|识别最影响投资结果的变量和下行情景。|改一改假设，看结论会变多少。|DCF,IRR
 
 # financials|财务与现金流|从利润表走到真实现金，识别增长质量。
+IFRS|International Financial Reporting Standards|国际财务报告准则，国际财务报告准则基金会发布的会计准则体系。|跨境比较公司财报时确认收入、金融工具与并购等项目采用的规则。|一套跨国公司常用的财报记账规则。|US GAAP,FVOCI,PPA|现常称 IFRS Accounting Standards；各法域的采用范围、适用版本及本地修订应单独核对。|IFRS Accounting Standards,国际财务报告准则
+US GAAP|United States Generally Accepted Accounting Principles|美国公认会计原则，美国非政府主体财务报告常用的会计规则体系。|比较美股与采用 IFRS 的公司时识别会计口径差异。|美国公司常用的一套财报规则。|IFRS,P&L|GAAP 一词可泛指某法域的公认会计原则；本词条特指美国规则，不能与 IFRS 完全互换。|GAAP,US-GAAP,美国公认会计原则
+BS|Balance Sheet|资产负债表，列示某一时点的资产、负债和所有者权益。|判断资本结构、净债务和营运资金状况。|公司在某一天拥有什么、欠什么。|CFS,P&L,NWC|国际财务报告准则正式名称常用 Statement of Financial Position；BS 是常见实务简称。|Statement of Financial Position,资产负债表
+CFS|Cash Flow Statement|现金流量表，列示期间经营、投资和筹资活动的现金流入流出。|检验利润变现、资本开支和外部融资需求。|钱从哪里来、往哪里去。|BS,P&L,CFO|正式名称常用 Statement of Cash Flows；现金流量不同于利润。|Statement of Cash Flows,现金流量表
+P&L|Profit and Loss|损益或利润表语境，反映一定期间的收入、费用和当期利润。|区分当期损益与 OCI，并分析利润来源及可持续性。|这一期账面上赚了还是亏了。|OCI,Net Income,Revenue|P&L 可指利润表，也可泛指当期损益；不同报表呈列名称可能不同。|P/L,Income Statement,利润表,损益表
+OCI|Other Comprehensive Income|其他综合收益，按准则列报但不计入当期损益的收益或费用项目。|分析投资公允价值变动及未来是否可能转入损益。|有些价值变化先记在利润之外的另一栏。|P&L,FVOCI|OCI 不等于现金流；某些项目以后重分类进损益，指定 FVOCI 的权益工具公允价值变动通常不重分类。|其他综合收益
 Revenue|Revenue|收入，企业在日常经营中确认的对价。|检验业务规模、增长和收入确认政策。|卖产品或服务记下来的营业收入。|ARR,Gross Profit|收入按会计准则确认，不等同于回款或 ARR。
+COGS|Cost of Goods Sold|销售成本，销售商品或提供服务对应的直接成本。|拆解毛利率和规模扩张是否真的改善盈利。|卖一单先花掉的直接成本。|Revenue,Gross Profit,Gross Margin|服务企业常用 Cost of Revenue 等名称；哪些费用计入直接成本须核对报表政策。|Cost of Revenue,营业成本,销售成本
 Gross Profit|Gross Profit|毛利润，收入减去销售成本。|判断产品单位经济性和可扩张空间。|卖出去后扣掉直接成本还剩多少。|Revenue,Gross Margin|财务报表中的 GP 常指 Gross Profit；本库 GP 词条用于基金普通合伙人。
 Gross Margin|Gross Margin|毛利率，毛利润占收入的比例。|比较产品定价能力、交付效率及同行差异。|每卖 100 元，扣掉直接成本还剩几元。|Gross Profit,Revenue|毛利率=毛利润÷收入；成本归集口径要一致。
-EBITDA|Earnings Before Interest, Taxes, Depreciation and Amortization|息税折旧摊销前利润，常用经营盈利代理指标。|用于同业估值和债务承载能力初筛。|先看生意经营赚多少，暂不计利息、税和折旧摊销。|Adjusted EBITDA,FCF,EV/EBITDA|EBITDA 不是现金流；忽略资本开支、营运资金和税款会高估可用现金。
+SG&A|Selling, General and Administrative Expenses|销售及管理费用，支持销售和公司日常管理的期间费用。|判断增长是否依靠过高的获客和管理投入。|把产品卖出去、把公司运转起来的费用。|P&L,Operating Margin,CAC|报表科目和研发费用列示因准则及公司政策而异，不能把 SG&A 等同全部营业费用。|SGA,销售及管理费用
+OpEx|Operating Expenses|营业费用，企业开展日常经营所发生并计入当期损益的费用。|衡量销售、管理及研发投入对营业利润和现金消耗的影响。|公司维持经营每期要花的费用。|SG&A,CapEx,Operating Margin|OpEx 与 CapEx 的区分取决于资本化规则；哪些项目列入营业费用应按报表口径核对。|OPEX,Operating Expenditure,营业费用
+EBITDA|Earnings Before Interest, Taxes, Depreciation and Amortization|息税折旧摊销前利润，常用经营盈利代理指标。|用于同业估值和债务承载能力初筛。|先看生意经营赚多少，暂不计利息、税和折旧摊销。|Adjusted EBITDA,FCF,EV/EBITDA,D&A|EBITDA 不是现金流；忽略资本开支、营运资金和税款会高估可用现金。
 Adjusted EBITDA|Adjusted EBITDA|经约定调整的 EBITDA，剔除或重分类特定项目。|估值谈判中核查正常化盈利基数。|把一次性项目调开后再看经营利润。|EBITDA,QoE|调整项目需逐项证据支持，买卖双方可能采用不同口径。
 EBIT|Earnings Before Interest and Taxes|息税前利润，营业利润的一种常用近似口径。|分析经营收益与资本结构无关的部分。|利润先不算利息和所得税。|EBITDA,Operating Margin|不同报表对营业利润和 EBIT 的桥接口径可能不同。
-Net Income|Net Income|净利润，扣除各项费用与税后的会计利润。|判断最终盈利、每股收益和市盈率。|账面上最后剩下的利润。|P/E,FCF|净利润不是现金余额，也不是自由现金流。
+D&A|Depreciation and Amortization|折旧与摊销，将长期资产成本按使用或受益期间分配。|把 EBITDA 桥接到营业利润，并检查资产密集度。|买设备和无形资产的成本分年记进费用。|EBITDA,CapEx,Impairment|折旧摊销是非现金当期费用，但资产购置通常曾发生现金支出。|Depreciation & Amortization,折旧摊销
+Net Income|Net Income|净利润，扣除各项费用与税后的会计利润。|判断最终盈利、每股收益和市盈率。|账面上最后剩下的利润。|P/E,FCF,P&L,EPS|净利润不是现金余额，也不是自由现金流。
+EPS|Earnings Per Share|每股收益，归属于普通股股东的利润按相应加权平均股数计算。|比较上市公司盈利与估值，并识别潜在稀释。|平均每股赚了多少钱。|Net Income,P/E,Fully Diluted Shares|基本 EPS 与稀释 EPS 的分母不同；不能直接用期末股数替代期间加权平均股数。|每股收益
 CFO|Cash Flow from Operations|经营活动现金流，企业日常经营形成的净现金流。|检验利润能否转化为现金。|做生意实际带回多少现金。|FCF,NWC|本库 CFO 指经营活动现金流；在职务语境也可指首席财务官。
+A/R|Accounts Receivable|应收账款，企业已取得的无条件收款权利。|检查收入回款质量、坏账风险和 DSO。|货卖出去了，客户还没付的钱。|Revenue,DSO,ECL|不同于仍受额外履约条件约束的合同资产；须检查账龄和信用损失准备。|AR,应收账款
+A/P|Accounts Payable|应付账款，企业购买商品或服务后尚未支付的款项。|判断供应商付款压力、营运资金和 DPO。|东西买了，钱还没付给供应商。|DPO,NWC,CFS|不能把所有应付款都视为无息融资，需区分账期和逾期款。|AP,应付账款
 CapEx|Capital Expenditure|资本性支出，用于购建长期资产的支出。|评估维持或扩张业务所需的再投资。|买设备、建系统等长期投入。|FCF,EBITDA|维持性和成长性资本开支的区分需要具体分析。
 FCF|Free Cash Flow|自由现金流，常见简化口径为经营现金流减资本开支。|衡量业务可用于偿债、分红或再投资的现金。|交完日常运营和必要长期投入后剩下的现金。|CFO,CapEx,EBITDA|FCF 有多种定义；分析时须说明是 CFO－CapEx、FCFF 还是 FCFE。
 FCFF|Free Cash Flow to the Firm|企业自由现金流，可供债权人与股东分配的现金流。|在 DCF 中与 WACC 配对估算企业价值。|公司所有出资人共同可分的现金。|FCFE,DCF|常用简式：EBIT×(1－税率)+折旧摊销－资本开支－营运资本增加。
@@ -91,6 +109,13 @@ ROE|Return on Equity|净资产收益率，净利润相对平均股东权益的�
 Debt/EBITDA|Debt to EBITDA Ratio|债务与 EBITDA 之比的杠杆倍数。|初筛债务负担与再融资风险。|债有经营盈利的多少倍。|EBITDA,Interest Coverage|债务是否用净债务、EBITDA 是否调整，应明确。
 Interest Coverage|Interest Coverage Ratio|利息保障倍数，衡量经营收益覆盖利息的能力。|测试加杠杆后的偿债安全边际。|经营收益够付几次利息。|EBIT,Cost of Debt|常见 EBIT÷利息费用，也有 EBITDA 口径，比较须统一。
 Operating Margin|Operating Margin|营业利润率，营业利润占收入的比例。|评估经营费用控制和规模效应。|每卖 100 元，扣完主要经营费用还剩多少。|Revenue,EBIT|营业利润定义因会计准则及报表列示而异。
+AC|Amortised Cost|摊余成本，以实际利率法调整初始金额、偿还本金并考虑信用损失后的计量基础。|看债券、贷款等金融资产的账面值与利息收入如何形成。|不是每天按市价重估，而是按合同现金流逐期记账。|EIR,ECL,FVOCI|本库 AC 指摊余成本，不是 Acquisition Cost；金融资产分类还需同时满足收取合同现金流的业务模式和 SPPI 条件。|Amortized Cost,摊余成本
+FVOCI|Fair Value Through Other Comprehensive Income|以公允价值计量且变动计入其他综合收益的金融资产分类。|识别估值波动是否先进入 OCI，以及出售时如何影响损益。|资产按市价记账，但某些涨跌先不进当期利润。|OCI,FVTPL,AC|债务工具通常须符合收取现金流及出售的业务模式和 SPPI；其累计 OCI 在终止确认时通常重分类进损益。指定 FVOCI 的非交易性权益工具公允价值变动通常不重分类。|公允价值变动计入其他综合收益
+FVTPL|Fair Value Through Profit or Loss|以公允价值计量且变动计入当期损益的金融资产或负债计量类别。|判断市场价格波动对当期利润和净资产的影响。|每期按公允价值重估，相关涨跌通常直接影响当期损益。|FVOCI,P&L,Fair Value|金融资产不符合 AC 或债务 FVOCI 分类条件时通常归入此类；某些项目还可依准则指定此类别。|FVPL,公允价值变动计入当期损益
+SPPI|Solely Payments of Principal and Interest|仅为本金及以未偿本金为基础的利息支付，是金融资产合同现金流特征测试。|判断债务工具是否有资格采用 AC 或债务 FVOCI 计量。|合同回款基本是还本金和付利息吗。|AC,FVOCI,FVTPL|通过 SPPI 测试还不够，仍须同时判断持有该资产的业务模式。|本金和利息支付测试
+EIR|Effective Interest Rate|实际利率，使预计合同现金流折现至初始账面金额的利率。|计算摊余成本、利息收入或利息费用。|把折价、溢价和部分费用摊进每期真实利息。|AC,ECL|实际利率法的现金流估计及相关费用范围须按适用准则判断；不是票面利率的同义词。|Effective Interest Method,实际利率
+ECL|Expected Credit Loss|预期信用损失，按违约概率及现金短缺现值等因素估计的前瞻性信用损失。|评估应收款、贷款及相关金融资产的坏账准备。|钱还没确定收不回来，也要先估计可能损失。|A/R,AC,Impairment|12 个月 ECL 指未来 12 个月内可能违约导致的整个存续期现金短缺，并非只计未来 12 个月的现金损失。|预期信用损失
+Impairment|Impairment|减值，资产可收回金额或预期收款能力下降引起的账面价值调整。|审查商誉、长期资产和信用资产估值是否过高。|账上记的价值可能收不回来，要往下调。|Goodwill,ECL,Fair Value|商誉等非金融资产通常依资产减值准则测试；金融资产预期信用损失按金融工具准则处理，不能混用规则。|Asset Impairment,资产减值
 
 # funds|基金管理与退出|理解基金是谁管、钱如何流动、收益如何报告。
 GP|General Partner|普通合伙人，在基金语境中负责管理并承担约定义务的一方。|评估管理团队、利益一致性和治理机制。|负责管基金和做投资的人或机构。|LP,Carry|本库 GP 指 General Partner；财务报表中的 GP 也可能指 Gross Profit。
@@ -112,7 +137,9 @@ Distribution|Distribution|基金向投资者返还现金或证券的分配。|�
 
 # software|软件、SaaS 与 AI|看清订阅增长、客户留存与 AI 成本。
 SaaS|Software as a Service|软件即服务，通常通过网络按订阅或使用量提供软件。|分析经常性收入、留存和交付成本。|不用自己安装维护，按服务方式使用软件。|ARR,NRR
+TAM|Total Addressable Market|总体可服务市场，产品或服务在明确定义市场中的理论总需求规模。|初筛增长空间，并检验市场假设是否过宽。|如果覆盖目标市场所有潜在客户，最多有多大盘子。|SaaS,Revenue,CAGR|TAM 不是公司实际可触达或可赢得的收入；应再区分 SAM 与 SOM，并说明价格和客户范围。|总潜在市场,总体可服务市场
 ARR|Annual Recurring Revenue|年度经常性收入，某时点活跃经常性合同价值的年化指标。|衡量订阅业务规模和未来收入基础。|把当前稳定订阅金额换算成一年。|MRR,Revenue|ARR 不是会计确认收入；是否含使用量、服务费与短约必须核对。
+Deferred Revenue|Deferred Revenue|递延收入，客户已付款或款项已到期、企业尚需履行交付义务的金额。|核对 SaaS 预收款、合同负债和未来收入确认节奏。|客户先付了钱，公司还欠着一部分服务。|ARR,Revenue,CFS|IFRS 15 常列为合同负债；递延收入不等于 ARR，也不代表未来全部可无条件确认收入。|Contract Liability,合同负债,预收收入
 MRR|Monthly Recurring Revenue|月度经常性收入，某月经常性订阅金额。|追踪订阅业务近期增长与变化。|这个月可重复获得的订阅费。|ARR,Revenue Churn|简单年化 ARR≈MRR×12，但季节性和合同结构会造成差异。
 NRR|Net Revenue Retention|净收入留存率，期初客户群收入经增购、降级与流失调整后的比例。|判断存量客户能否持续扩张。|不靠新客户，老客户今年比去年多付还是少付。|GRR,Expansion Revenue,Revenue Churn|常见公式：(期初 ARR+增购－降级－流失)÷期初 ARR；不含新客户，不同公司口径可能不同。
 GRR|Gross Revenue Retention|总收入留存率，期初客户群收入扣除降级和流失后的比例。|衡量原有收入的基础保留能力。|不算老客户增购，只看原来的收入留住多少。|NRR,Revenue Churn|常见公式：(期初 ARR－降级－流失)÷期初 ARR；通常不超过 100%。
@@ -134,6 +161,9 @@ RAG|Retrieval-Augmented Generation|检索增强生成，先检索外部资料再
 
 # mandA|并购、战略合作与整合|从交易结构走到协同兑现。
 M&A|Mergers and Acquisitions|并购，企业合并或收购控制权与资产的活动。|识别交易目的、定价、整合和反垄断风险。|把公司或业务买进来、合在一起。|Buyout,PMI|合并与收购法律结构不同，统称不替代具体分析。|Merger and Acquisition
+PPA|Purchase Price Allocation|购买价分摊，在企业合并中把收购对价分配至可辨认资产、负债及商誉等项目。|检验并购后无形资产摊销、商誉规模和利润变化。|买公司后，要把价格分清哪些对应资产、哪些是商誉。|Goodwill,Fair Value,NCI|PPA 是实务简称；具体确认和计量依企业合并准则，不能把所有股权交易都当作会计上的企业合并。|购买价分摊
+Goodwill|Goodwill|商誉，企业合并中对价及相关权益超过取得的可辨认净资产金额形成的余额。|判断收购溢价是否能由未来协同和现金流支持，并关注减值。|买价中无法单独归到某项可辨认资产的那部分。|PPA,Impairment,Synergy|计量还涉及非控制性权益、原持有权益及廉价购买等情形；商誉不是可单独交易的现金资产。|商誉
+NCI|Non-controlling Interest|非控制性权益，子公司权益中不归属于母公司的部分。|在合并报表、商誉计量和 EV 到母公司股权价值桥接时识别少数股东份额。|子公司里属于其他股东的那一份。|PPA,Goodwill,EV|也称少数股东权益；是否加入 EV 桥接及采用何种金额须与分子分母和交易口径一致。|Minority Interest,少数股东权益,非控股权益
 PMI|Post-Merger Integration|并购后整合，将人员、系统、流程和业务计划落地。|检验协同能否兑现及整合成本、文化风险。|买完之后，把两边真正协同运转。|M&A,Synergy
 Synergy|Synergy|协同效应，两项业务结合后的增量经济价值。|验证收购溢价是否有可执行的回报来源。|合在一起比各自单干多创造的价值。|Revenue Synergy,Cost Synergy|协同要扣除实现成本、时间和执行风险。
 Revenue Synergy|Revenue Synergy|收入协同，交叉销售、渠道共享等带来的增量收入。|测算战略收购的增长潜力。|两家公司一起卖，卖得比以前更多。|Synergy,CDD|须区分新增销售与原有业务转移。

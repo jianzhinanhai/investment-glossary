@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "content" / "terms.psv"
 TARGET = ROOT / "data" / "glossary.json"
-EXPECTED = [22, 18, 24, 22, 16, 20, 16, 12]
+EXPECTED = [22, 18, 29, 42, 16, 22, 19, 12]
 
 
 def slug(value: str) -> str:
@@ -50,8 +50,8 @@ def main() -> None:
         if len(parts) > 7 and parts[7]:
             entry["aliases"] = [item.strip() for item in parts[7].split(",")]
         terms.append(entry)
-    if len(categories) != 8 or len(terms) != 150:
-        raise ValueError(f"Expected 8 categories and 150 terms; got {len(categories)} and {len(terms)}")
+    if len(categories) != len(EXPECTED) or len(terms) != sum(EXPECTED):
+        raise ValueError(f"Expected {len(EXPECTED)} categories and {sum(EXPECTED)} terms; got {len(categories)} and {len(terms)}")
     ids = [term["id"] for term in terms]
     if len(set(ids)) != len(ids):
         raise ValueError("Duplicate term ID")
@@ -72,7 +72,7 @@ def main() -> None:
             resolved.append(ref)
         term["related"] = list(dict.fromkeys(resolved))
     output = {
-        "version": "1.0.0",
+        "version": "1.1.0",
         "updated": "2026-10-14",
         "categories": categories,
         "terms": terms,

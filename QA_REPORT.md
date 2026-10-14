@@ -1,14 +1,14 @@
-# Investment Glossary V1 验收记录
+# Investment Glossary V1.1 验收记录
 
-检查日期：2026-10-14。发布前在独立 D 盘项目目录中完成。
+检查日期：2026-10-14。扩充词库后在独立 D 盘项目目录中复核。
 
 ## 内容
 
 | 检查 | 结果 |
 | --- | --- |
-| 有效词条 | 150 |
-| 分类 | 8；数量依次为 22、18、24、22、16、20、16、12 |
-| 重复 ID、必填字段、关联链接 | 通过；312 条关联链接全部指向有效词条 |
+| 有效词条 | 180；新增 30 个常用财报、金融工具、估值、SaaS 和并购术语 |
+| 分类 | 8；数量依次为 22、18、29、42、16、22、19、12 |
+| 重复 ID、必填字段、关联链接 | 通过；401 条关联链接全部指向有效词条 |
 | 高频概念和多义词 | VC、PE、CVC、DD、TS、GP、EV、IRR、MOIC、FCF、DPI、TVPI、ARR、NRR 等均覆盖；GP、TS 注明业务语境 |
 | 关键口径 | EV/Equity Value、EBITDA/FCF、IRR/MOIC、ARR/Revenue、DPI/TVPI 均有区分与提醒 |
 | 占位内容 | JSON 词库未检出 TODO、TBD、lorem、placeholder 或示例词条 |
@@ -19,17 +19,23 @@
 
 | 检查 | 结果 |
 | --- | --- |
-| 英文全称、中文和别名搜索 | 通过 |
+| 英文全称、中文和别名搜索 | 通过；复核 FVPL→FVTPL、Amortized Cost→AC、Profit and Loss→P&L、Purchase Price Allocation→PPA、其他综合收益→OCI/FVOCI，以及 IFRS、US GAAP、Operating Expenses、CAGR、TTM、YoY、TAM |
 | 搜索无结果提示、分类切换 | 通过 |
-| 关联术语跳转 | 通过 |
+| 关联术语跳转 | 通过；复核 FVOCI→OCI |
 | 收藏与刷新后保留 | 通过 |
 | 每次 5 个推荐、标记已掌握、刷新后保留 | 通过 |
 | 6 张原生 SVG 图解展示及关键节点点击 | 通过 |
 | 深浅色切换与刷新后保留 | 通过 |
 | 375px、393px、1440px，三个页面横向溢出 | 均未发现 |
 | 浏览器控制台致命错误 | 未发现 |
-| PWA 离线 | 本地服务器停止后重新加载，仍显示 150 个词条 |
+| PWA 离线 | 本地服务器停止后重新加载，仍显示 180 个词条及 6 张图解；前轮测试中收藏仍保留 |
 | 主页、JSON、CSS、JS、图标、manifest、SW、来源页 | 本地 HTTP 均返回 200 |
+
+## 本次词库补漏
+
+新增 BS、CFS、P&L、OCI、COGS、SG&A、D&A、EPS、A/R、A/P、AC、FVOCI、FVTPL、SPPI、EIR、ECL、Impairment、IFRS、US GAAP、OpEx、Fair Value、Fair Value Hierarchy、CAGR、TTM、YoY、TAM、Deferred Revenue、PPA、Goodwill、NCI。对 AC 的多义性、债务与权益工具的 FVOCI 后续处理、P&L 与 OCI 的区别、ECL 的 12 个月口径及 PPA 的适用边界作了提醒。来源页补充 IFRS Foundation 的 IFRS 9、13、3、15 参考。
+
+375px、393px 与 1440px 视口复查均未发现横向溢出；浏览器错误日志为空。学习推荐仍为 5 个，收藏、已掌握进度和深色模式刷新后保留。
 
 ## 验证边界
 

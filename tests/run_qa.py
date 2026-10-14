@@ -22,20 +22,23 @@ def content_checks():
     data = json.loads((ROOT / "data" / "glossary.json").read_text(encoding="utf-8"))
     terms = data["terms"]
     categories = data["categories"]
-    assert len(terms) == 150 and len(categories) == 8
-    assert [item["count"] for item in categories] == [22, 18, 24, 22, 16, 20, 16, 12]
+    assert len(terms) == 180 and len(categories) == 8
+    assert [item["count"] for item in categories] == [22, 18, 29, 42, 16, 22, 19, 12]
     ids = [term["id"] for term in terms]
     assert len(ids) == len(set(ids))
     for term in terms:
         assert all(isinstance(term.get(key), str) and term[key].strip() for key in ("term", "fullName", "zh", "practical", "plain"))
         assert len(term["related"]) >= 2 and all(ref in ids and ref != term["id"] for ref in term["related"])
         assert not re.search(r"TODO|TBD|lorem|placeholder|待补充|示例词条", json.dumps(term, ensure_ascii=False), re.I)
-    for label in ("vc", "pe", "cvc", "dd", "ts", "ic", "spa", "sha", "spv", "jv", "ev", "dcf", "irr", "moic", "wacc", "ebitda", "fcf", "roic", "gp", "lp", "dpi", "tvpi", "arr", "nrr", "cac", "ltv", "pmi"):
+    for label in ("vc", "pe", "cvc", "dd", "ts", "ic", "spa", "sha", "spv", "jv", "ev", "dcf", "irr", "moic", "wacc", "ebitda", "fcf", "roic", "gp", "lp", "dpi", "tvpi", "arr", "nrr", "cac", "ltv", "pmi", "oci", "fvoci", "ac", "fvtpl", "p-l", "sppi", "ecl", "eir", "bs", "cfs", "a-r", "a-p", "cogs", "sg-a", "d-a", "eps", "ppa", "goodwill", "nci", "deferred-revenue", "fair-value", "fair-value-hierarchy", "impairment", "ifrs", "us-gaap", "opex", "cagr", "ttm", "yoy", "tam"):
         assert label in ids
     by_id = {term["id"]: term for term in terms}
     assert "Gross Profit" in by_id["gp"]["note"] and "Term Sheet" in by_id["ts"]["note"]
     assert "EBITDA 不是现金流" in by_id["ebitda"]["note"]
     assert "TVPI=DPI+RVPI" in by_id["tvpi"]["note"]
+    assert "不重分类" in by_id["fvoci"]["note"] and "不重分类" in by_id["oci"]["note"]
+    assert "Acquisition Cost" in by_id["ac"]["note"]
+    assert "FVPL" in by_id["fvtpl"]["aliases"]
     return {"terms": len(terms), "categories": len(categories), "counts": [item["count"] for item in categories], "related_links": sum(len(term["related"]) for term in terms)}
 
 
@@ -53,14 +56,18 @@ def run_browser(browser_type, base, name, viewport, is_mobile=False, full=False)
     page.on("pageerror", lambda error: errors.append(str(error)))
     page.on("response", lambda response: failed_responses.append(f"{response.status} {response.url}") if response.status >= 400 else None)
     page.goto(base, wait_until="networkidle")
-    expect(page.locator("#result-count")).to_have_text("找到 150 个术语")
-    assert page.locator("#term-grid .term-card").count() == 150
+    expect(page.locator("#result-count")).to_have_text("找到 180 个术语")
+    assert page.locator("#term-grid .term-card").count() == 180
     assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth + 1")
     page.screenshot(path=str(OUT / f"{name}-home.png"), full_page=False)
     page.locator("#search-input").fill("Internal Rate of Return")
     expect(page.locator("#result-count")).to_have_text("找到 1 个术语")
     page.locator("#search-input").fill("内部收益率")
     expect(page.locator("#term-grid .term-card")).to_have_count(1)
+    page.locator("#search-input").fill("FVPL")
+    expect(page.locator("#term-grid .term-card")).to_have_count(1)
+    page.locator("#search-input").fill("其他综合收益")
+    expect(page.locator("#term-grid .term-card")).to_have_count(2)
     page.locator("#search-input").fill("")
     page.locator('[data-category="process"]').click()
     expect(page.locator("#result-count")).to_have_text("找到 22 个术语")
@@ -85,7 +92,7 @@ def run_browser(browser_type, base, name, viewport, is_mobile=False, full=False)
     recommended = page.locator("#recommendations .recommendation").first.get_attribute("data-open")
     page.locator("#recommendations .recommendation").first.click()
     page.locator(f'#dialog-body [data-mastered="{recommended}"]').click()
-    expect(page.locator("#progress-copy")).to_have_text("已掌握 1 / 150 个术语")
+    expect(page.locator("#progress-copy")).to_have_text("已掌握 1 / 180 个术语")
     page.locator("#dialog-close").click()
     expect(page.locator("#diagram-grid .diagram-card")).to_have_count(6)
     page.locator('#diagram-grid [data-term="ev"]').click()
@@ -103,14 +110,14 @@ def run_browser(browser_type, base, name, viewport, is_mobile=False, full=False)
     page.reload(wait_until="networkidle")
     expect(page.locator("html")).to_have_attribute("data-theme", "dark")
     page.locator('[data-view="learn"]').click()
-    expect(page.locator("#progress-copy")).to_have_text("已掌握 1 / 150 个术语")
+    expect(page.locator("#progress-copy")).to_have_text("已掌握 1 / 180 个术语")
     if full:
         page.evaluate("navigator.serviceWorker.ready")
         page.reload(wait_until="networkidle")
         assert page.evaluate("Boolean(navigator.serviceWorker.controller)")
         context.set_offline(True)
         page.reload(wait_until="domcontentloaded")
-        expect(page.locator("#result-count")).to_have_text("找到 150 个术语")
+        expect(page.locator("#result-count")).to_have_text("找到 180 个术语")
         context.set_offline(False)
     assert not errors, f"JavaScript errors: {errors}"
     assert not failed_responses, f"HTTP failures: {failed_responses}"

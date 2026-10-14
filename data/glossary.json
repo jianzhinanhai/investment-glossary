@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-10-14",
   "categories": [
     {
@@ -18,13 +18,13 @@
       "id": "valuation",
       "name": "估值与投资回报",
       "description": "把企业价值、股权价值与资金回报放到同一张图上。",
-      "count": 24
+      "count": 29
     },
     {
       "id": "financials",
       "name": "财务与现金流",
       "description": "从利润表走到真实现金，识别增长质量。",
-      "count": 22
+      "count": 42
     },
     {
       "id": "funds",
@@ -36,13 +36,13 @@
       "id": "software",
       "name": "软件、SaaS 与 AI",
       "description": "看清订阅增长、客户留存与 AI 成本。",
-      "count": 20
+      "count": 22
     },
     {
       "id": "mandA",
       "name": "并购、战略合作与整合",
       "description": "从交易结构走到协同兑现。",
-      "count": 16
+      "count": 19
     },
     {
       "id": "markets",
@@ -619,6 +619,41 @@
       ]
     },
     {
+      "id": "fair-value",
+      "category": "valuation",
+      "term": "Fair Value",
+      "fullName": "Fair Value",
+      "zh": "公允价值，计量日市场参与者在有序交易中出售资产或转移负债的价格。",
+      "practical": "核查交易估值、金融工具计量和并购资产重估的假设。",
+      "plain": "按当前市场条件，这项资产或负债值多少。",
+      "related": [
+        "fair-value-hierarchy",
+        "fvtpl",
+        "ppa"
+      ],
+      "note": "公允价值是市场参与者视角的退出价格，不必等于账面价值或企业内部使用价值。"
+    },
+    {
+      "id": "fair-value-hierarchy",
+      "category": "valuation",
+      "term": "Fair Value Hierarchy",
+      "fullName": "Fair Value Hierarchy",
+      "zh": "公允价值层级，按估值输入值的可观察程度分为第一、第二和第三层级。",
+      "practical": "阅读估值附注时判断价格对模型与不可观察假设的依赖。",
+      "plain": "越靠第三层级，越需要检查估值假设。",
+      "related": [
+        "fair-value",
+        "goodwill"
+      ],
+      "note": "第一层级是相同项目活跃市场未调整报价；第二层级为其他可观察输入；第三层级含重大不可观察输入。",
+      "aliases": [
+        "Level 1",
+        "Level 2",
+        "Level 3",
+        "公允价值层级"
+      ]
+    },
+    {
       "id": "equity-value",
       "category": "valuation",
       "term": "Equity Value",
@@ -751,6 +786,63 @@
         "npv"
       ],
       "note": "IRR 是资金加权、通常年化；非正常现金流可能有多个或无有效 IRR，未实现价值依赖估值。"
+    },
+    {
+      "id": "cagr",
+      "category": "valuation",
+      "term": "CAGR",
+      "fullName": "Compound Annual Growth Rate",
+      "zh": "复合年增长率，把一段时期的总增长折算为每年的等效增长率。",
+      "practical": "比较不同持有期公司的收入、利润或市场规模增长。",
+      "plain": "假设每年平稳增长，平均一年长了多少。",
+      "related": [
+        "revenue",
+        "yoy",
+        "ttm"
+      ],
+      "note": "常用公式：(期末值÷期初值)^(1/年数)－1；要求期初与期末口径可比且期初为正，不展示中途波动。",
+      "aliases": [
+        "复合年增长率"
+      ]
+    },
+    {
+      "id": "ttm",
+      "category": "valuation",
+      "term": "TTM",
+      "fullName": "Trailing Twelve Months",
+      "zh": "最近连续十二个月的实际业绩区间。",
+      "practical": "做估值倍数和增长比较时减少财年截止日差异。",
+      "plain": "从现在往前数十二个月看业绩。",
+      "related": [
+        "revenue",
+        "ebitda",
+        "yoy"
+      ],
+      "note": "LTM 常作同义词；需区分已披露的滚动十二个月与预测未来十二个月 NTM。",
+      "aliases": [
+        "LTM",
+        "Last Twelve Months",
+        "最近十二个月"
+      ]
+    },
+    {
+      "id": "yoy",
+      "category": "valuation",
+      "term": "YoY",
+      "fullName": "Year over Year",
+      "zh": "同比，当前期间相对上一年同一期间的变化。",
+      "practical": "评估收入或利润增长是否受季节性影响。",
+      "plain": "今年这一季和去年同一季相比。",
+      "related": [
+        "cagr",
+        "revenue",
+        "ttm"
+      ],
+      "note": "同比增长率常用 (本期－上年同期)÷上年同期；上年同期为零或负数时百分比解释需谨慎。",
+      "aliases": [
+        "Year-on-Year",
+        "同比"
+      ]
     },
     {
       "id": "moic",
@@ -944,6 +1036,120 @@
       ]
     },
     {
+      "id": "ifrs",
+      "category": "financials",
+      "term": "IFRS",
+      "fullName": "International Financial Reporting Standards",
+      "zh": "国际财务报告准则，国际财务报告准则基金会发布的会计准则体系。",
+      "practical": "跨境比较公司财报时确认收入、金融工具与并购等项目采用的规则。",
+      "plain": "一套跨国公司常用的财报记账规则。",
+      "related": [
+        "us-gaap",
+        "fvoci",
+        "ppa"
+      ],
+      "note": "现常称 IFRS Accounting Standards；各法域的采用范围、适用版本及本地修订应单独核对。",
+      "aliases": [
+        "IFRS Accounting Standards",
+        "国际财务报告准则"
+      ]
+    },
+    {
+      "id": "us-gaap",
+      "category": "financials",
+      "term": "US GAAP",
+      "fullName": "United States Generally Accepted Accounting Principles",
+      "zh": "美国公认会计原则，美国非政府主体财务报告常用的会计规则体系。",
+      "practical": "比较美股与采用 IFRS 的公司时识别会计口径差异。",
+      "plain": "美国公司常用的一套财报规则。",
+      "related": [
+        "ifrs",
+        "p-l"
+      ],
+      "note": "GAAP 一词可泛指某法域的公认会计原则；本词条特指美国规则，不能与 IFRS 完全互换。",
+      "aliases": [
+        "GAAP",
+        "US-GAAP",
+        "美国公认会计原则"
+      ]
+    },
+    {
+      "id": "bs",
+      "category": "financials",
+      "term": "BS",
+      "fullName": "Balance Sheet",
+      "zh": "资产负债表，列示某一时点的资产、负债和所有者权益。",
+      "practical": "判断资本结构、净债务和营运资金状况。",
+      "plain": "公司在某一天拥有什么、欠什么。",
+      "related": [
+        "cfs",
+        "p-l",
+        "nwc"
+      ],
+      "note": "国际财务报告准则正式名称常用 Statement of Financial Position；BS 是常见实务简称。",
+      "aliases": [
+        "Statement of Financial Position",
+        "资产负债表"
+      ]
+    },
+    {
+      "id": "cfs",
+      "category": "financials",
+      "term": "CFS",
+      "fullName": "Cash Flow Statement",
+      "zh": "现金流量表，列示期间经营、投资和筹资活动的现金流入流出。",
+      "practical": "检验利润变现、资本开支和外部融资需求。",
+      "plain": "钱从哪里来、往哪里去。",
+      "related": [
+        "bs",
+        "p-l",
+        "cfo"
+      ],
+      "note": "正式名称常用 Statement of Cash Flows；现金流量不同于利润。",
+      "aliases": [
+        "Statement of Cash Flows",
+        "现金流量表"
+      ]
+    },
+    {
+      "id": "p-l",
+      "category": "financials",
+      "term": "P&L",
+      "fullName": "Profit and Loss",
+      "zh": "损益或利润表语境，反映一定期间的收入、费用和当期利润。",
+      "practical": "区分当期损益与 OCI，并分析利润来源及可持续性。",
+      "plain": "这一期账面上赚了还是亏了。",
+      "related": [
+        "oci",
+        "net-income",
+        "revenue"
+      ],
+      "note": "P&L 可指利润表，也可泛指当期损益；不同报表呈列名称可能不同。",
+      "aliases": [
+        "P/L",
+        "Income Statement",
+        "利润表",
+        "损益表"
+      ]
+    },
+    {
+      "id": "oci",
+      "category": "financials",
+      "term": "OCI",
+      "fullName": "Other Comprehensive Income",
+      "zh": "其他综合收益，按准则列报但不计入当期损益的收益或费用项目。",
+      "practical": "分析投资公允价值变动及未来是否可能转入损益。",
+      "plain": "有些价值变化先记在利润之外的另一栏。",
+      "related": [
+        "p-l",
+        "fvoci"
+      ],
+      "note": "OCI 不等于现金流；某些项目以后重分类进损益，指定 FVOCI 的权益工具公允价值变动通常不重分类。",
+      "aliases": [
+        "其他综合收益"
+      ]
+    },
+    {
       "id": "revenue",
       "category": "financials",
       "term": "Revenue",
@@ -956,6 +1162,26 @@
         "gross-profit"
       ],
       "note": "收入按会计准则确认，不等同于回款或 ARR。"
+    },
+    {
+      "id": "cogs",
+      "category": "financials",
+      "term": "COGS",
+      "fullName": "Cost of Goods Sold",
+      "zh": "销售成本，销售商品或提供服务对应的直接成本。",
+      "practical": "拆解毛利率和规模扩张是否真的改善盈利。",
+      "plain": "卖一单先花掉的直接成本。",
+      "related": [
+        "revenue",
+        "gross-profit",
+        "gross-margin"
+      ],
+      "note": "服务企业常用 Cost of Revenue 等名称；哪些费用计入直接成本须核对报表政策。",
+      "aliases": [
+        "Cost of Revenue",
+        "营业成本",
+        "销售成本"
+      ]
     },
     {
       "id": "gross-profit",
@@ -986,6 +1212,45 @@
       "note": "毛利率=毛利润÷收入；成本归集口径要一致。"
     },
     {
+      "id": "sg-a",
+      "category": "financials",
+      "term": "SG&A",
+      "fullName": "Selling, General and Administrative Expenses",
+      "zh": "销售及管理费用，支持销售和公司日常管理的期间费用。",
+      "practical": "判断增长是否依靠过高的获客和管理投入。",
+      "plain": "把产品卖出去、把公司运转起来的费用。",
+      "related": [
+        "p-l",
+        "operating-margin",
+        "cac"
+      ],
+      "note": "报表科目和研发费用列示因准则及公司政策而异，不能把 SG&A 等同全部营业费用。",
+      "aliases": [
+        "SGA",
+        "销售及管理费用"
+      ]
+    },
+    {
+      "id": "opex",
+      "category": "financials",
+      "term": "OpEx",
+      "fullName": "Operating Expenses",
+      "zh": "营业费用，企业开展日常经营所发生并计入当期损益的费用。",
+      "practical": "衡量销售、管理及研发投入对营业利润和现金消耗的影响。",
+      "plain": "公司维持经营每期要花的费用。",
+      "related": [
+        "sg-a",
+        "capex",
+        "operating-margin"
+      ],
+      "note": "OpEx 与 CapEx 的区分取决于资本化规则；哪些项目列入营业费用应按报表口径核对。",
+      "aliases": [
+        "OPEX",
+        "Operating Expenditure",
+        "营业费用"
+      ]
+    },
+    {
       "id": "ebitda",
       "category": "financials",
       "term": "EBITDA",
@@ -996,7 +1261,8 @@
       "related": [
         "adjusted-ebitda",
         "fcf",
-        "ev-ebitda"
+        "ev-ebitda",
+        "d-a"
       ],
       "note": "EBITDA 不是现金流；忽略资本开支、营运资金和税款会高估可用现金。"
     },
@@ -1029,6 +1295,25 @@
       "note": "不同报表对营业利润和 EBIT 的桥接口径可能不同。"
     },
     {
+      "id": "d-a",
+      "category": "financials",
+      "term": "D&A",
+      "fullName": "Depreciation and Amortization",
+      "zh": "折旧与摊销，将长期资产成本按使用或受益期间分配。",
+      "practical": "把 EBITDA 桥接到营业利润，并检查资产密集度。",
+      "plain": "买设备和无形资产的成本分年记进费用。",
+      "related": [
+        "ebitda",
+        "capex",
+        "impairment"
+      ],
+      "note": "折旧摊销是非现金当期费用，但资产购置通常曾发生现金支出。",
+      "aliases": [
+        "Depreciation & Amortization",
+        "折旧摊销"
+      ]
+    },
+    {
       "id": "net-income",
       "category": "financials",
       "term": "Net Income",
@@ -1038,9 +1323,29 @@
       "plain": "账面上最后剩下的利润。",
       "related": [
         "p-e",
-        "fcf"
+        "fcf",
+        "p-l",
+        "eps"
       ],
       "note": "净利润不是现金余额，也不是自由现金流。"
+    },
+    {
+      "id": "eps",
+      "category": "financials",
+      "term": "EPS",
+      "fullName": "Earnings Per Share",
+      "zh": "每股收益，归属于普通股股东的利润按相应加权平均股数计算。",
+      "practical": "比较上市公司盈利与估值，并识别潜在稀释。",
+      "plain": "平均每股赚了多少钱。",
+      "related": [
+        "net-income",
+        "p-e",
+        "fully-diluted-shares"
+      ],
+      "note": "基本 EPS 与稀释 EPS 的分母不同；不能直接用期末股数替代期间加权平均股数。",
+      "aliases": [
+        "每股收益"
+      ]
     },
     {
       "id": "cfo",
@@ -1055,6 +1360,44 @@
         "nwc"
       ],
       "note": "本库 CFO 指经营活动现金流；在职务语境也可指首席财务官。"
+    },
+    {
+      "id": "a-r",
+      "category": "financials",
+      "term": "A/R",
+      "fullName": "Accounts Receivable",
+      "zh": "应收账款，企业已取得的无条件收款权利。",
+      "practical": "检查收入回款质量、坏账风险和 DSO。",
+      "plain": "货卖出去了，客户还没付的钱。",
+      "related": [
+        "revenue",
+        "dso",
+        "ecl"
+      ],
+      "note": "不同于仍受额外履约条件约束的合同资产；须检查账龄和信用损失准备。",
+      "aliases": [
+        "AR",
+        "应收账款"
+      ]
+    },
+    {
+      "id": "a-p",
+      "category": "financials",
+      "term": "A/P",
+      "fullName": "Accounts Payable",
+      "zh": "应付账款，企业购买商品或服务后尚未支付的款项。",
+      "practical": "判断供应商付款压力、营运资金和 DPO。",
+      "plain": "东西买了，钱还没付给供应商。",
+      "related": [
+        "dpo",
+        "nwc",
+        "cfs"
+      ],
+      "note": "不能把所有应付款都视为无息融资，需区分账期和逾期款。",
+      "aliases": [
+        "AP",
+        "应付账款"
+      ]
     },
     {
       "id": "capex",
@@ -1253,6 +1596,135 @@
         "ebit"
       ],
       "note": "营业利润定义因会计准则及报表列示而异。"
+    },
+    {
+      "id": "ac",
+      "category": "financials",
+      "term": "AC",
+      "fullName": "Amortised Cost",
+      "zh": "摊余成本，以实际利率法调整初始金额、偿还本金并考虑信用损失后的计量基础。",
+      "practical": "看债券、贷款等金融资产的账面值与利息收入如何形成。",
+      "plain": "不是每天按市价重估，而是按合同现金流逐期记账。",
+      "related": [
+        "eir",
+        "ecl",
+        "fvoci"
+      ],
+      "note": "本库 AC 指摊余成本，不是 Acquisition Cost；金融资产分类还需同时满足收取合同现金流的业务模式和 SPPI 条件。",
+      "aliases": [
+        "Amortized Cost",
+        "摊余成本"
+      ]
+    },
+    {
+      "id": "fvoci",
+      "category": "financials",
+      "term": "FVOCI",
+      "fullName": "Fair Value Through Other Comprehensive Income",
+      "zh": "以公允价值计量且变动计入其他综合收益的金融资产分类。",
+      "practical": "识别估值波动是否先进入 OCI，以及出售时如何影响损益。",
+      "plain": "资产按市价记账，但某些涨跌先不进当期利润。",
+      "related": [
+        "oci",
+        "fvtpl",
+        "ac"
+      ],
+      "note": "债务工具通常须符合收取现金流及出售的业务模式和 SPPI；其累计 OCI 在终止确认时通常重分类进损益。指定 FVOCI 的非交易性权益工具公允价值变动通常不重分类。",
+      "aliases": [
+        "公允价值变动计入其他综合收益"
+      ]
+    },
+    {
+      "id": "fvtpl",
+      "category": "financials",
+      "term": "FVTPL",
+      "fullName": "Fair Value Through Profit or Loss",
+      "zh": "以公允价值计量且变动计入当期损益的金融资产或负债计量类别。",
+      "practical": "判断市场价格波动对当期利润和净资产的影响。",
+      "plain": "每期按公允价值重估，相关涨跌通常直接影响当期损益。",
+      "related": [
+        "fvoci",
+        "p-l",
+        "fair-value"
+      ],
+      "note": "金融资产不符合 AC 或债务 FVOCI 分类条件时通常归入此类；某些项目还可依准则指定此类别。",
+      "aliases": [
+        "FVPL",
+        "公允价值变动计入当期损益"
+      ]
+    },
+    {
+      "id": "sppi",
+      "category": "financials",
+      "term": "SPPI",
+      "fullName": "Solely Payments of Principal and Interest",
+      "zh": "仅为本金及以未偿本金为基础的利息支付，是金融资产合同现金流特征测试。",
+      "practical": "判断债务工具是否有资格采用 AC 或债务 FVOCI 计量。",
+      "plain": "合同回款基本是还本金和付利息吗。",
+      "related": [
+        "ac",
+        "fvoci",
+        "fvtpl"
+      ],
+      "note": "通过 SPPI 测试还不够，仍须同时判断持有该资产的业务模式。",
+      "aliases": [
+        "本金和利息支付测试"
+      ]
+    },
+    {
+      "id": "eir",
+      "category": "financials",
+      "term": "EIR",
+      "fullName": "Effective Interest Rate",
+      "zh": "实际利率，使预计合同现金流折现至初始账面金额的利率。",
+      "practical": "计算摊余成本、利息收入或利息费用。",
+      "plain": "把折价、溢价和部分费用摊进每期真实利息。",
+      "related": [
+        "ac",
+        "ecl"
+      ],
+      "note": "实际利率法的现金流估计及相关费用范围须按适用准则判断；不是票面利率的同义词。",
+      "aliases": [
+        "Effective Interest Method",
+        "实际利率"
+      ]
+    },
+    {
+      "id": "ecl",
+      "category": "financials",
+      "term": "ECL",
+      "fullName": "Expected Credit Loss",
+      "zh": "预期信用损失，按违约概率及现金短缺现值等因素估计的前瞻性信用损失。",
+      "practical": "评估应收款、贷款及相关金融资产的坏账准备。",
+      "plain": "钱还没确定收不回来，也要先估计可能损失。",
+      "related": [
+        "a-r",
+        "ac",
+        "impairment"
+      ],
+      "note": "12 个月 ECL 指未来 12 个月内可能违约导致的整个存续期现金短缺，并非只计未来 12 个月的现金损失。",
+      "aliases": [
+        "预期信用损失"
+      ]
+    },
+    {
+      "id": "impairment",
+      "category": "financials",
+      "term": "Impairment",
+      "fullName": "Impairment",
+      "zh": "减值，资产可收回金额或预期收款能力下降引起的账面价值调整。",
+      "practical": "审查商誉、长期资产和信用资产估值是否过高。",
+      "plain": "账上记的价值可能收不回来，要往下调。",
+      "related": [
+        "goodwill",
+        "ecl",
+        "fair-value"
+      ],
+      "note": "商誉等非金融资产通常依资产减值准则测试；金融资产预期信用损失按金融工具准则处理，不能混用规则。",
+      "aliases": [
+        "Asset Impairment",
+        "资产减值"
+      ]
     },
     {
       "id": "gp",
@@ -1493,6 +1965,25 @@
       ]
     },
     {
+      "id": "tam",
+      "category": "software",
+      "term": "TAM",
+      "fullName": "Total Addressable Market",
+      "zh": "总体可服务市场，产品或服务在明确定义市场中的理论总需求规模。",
+      "practical": "初筛增长空间，并检验市场假设是否过宽。",
+      "plain": "如果覆盖目标市场所有潜在客户，最多有多大盘子。",
+      "related": [
+        "saas",
+        "revenue",
+        "cagr"
+      ],
+      "note": "TAM 不是公司实际可触达或可赢得的收入；应再区分 SAM 与 SOM，并说明价格和客户范围。",
+      "aliases": [
+        "总潜在市场",
+        "总体可服务市场"
+      ]
+    },
+    {
       "id": "arr",
       "category": "software",
       "term": "ARR",
@@ -1505,6 +1996,26 @@
         "revenue"
       ],
       "note": "ARR 不是会计确认收入；是否含使用量、服务费与短约必须核对。"
+    },
+    {
+      "id": "deferred-revenue",
+      "category": "software",
+      "term": "Deferred Revenue",
+      "fullName": "Deferred Revenue",
+      "zh": "递延收入，客户已付款或款项已到期、企业尚需履行交付义务的金额。",
+      "practical": "核对 SaaS 预收款、合同负债和未来收入确认节奏。",
+      "plain": "客户先付了钱，公司还欠着一部分服务。",
+      "related": [
+        "arr",
+        "revenue",
+        "cfs"
+      ],
+      "note": "IFRS 15 常列为合同负债；递延收入不等于 ARR，也不代表未来全部可无条件确认收入。",
+      "aliases": [
+        "Contract Liability",
+        "合同负债",
+        "预收收入"
+      ]
     },
     {
       "id": "mrr",
@@ -1771,6 +2282,62 @@
       "note": "合并与收购法律结构不同，统称不替代具体分析。",
       "aliases": [
         "Merger and Acquisition"
+      ]
+    },
+    {
+      "id": "ppa",
+      "category": "mandA",
+      "term": "PPA",
+      "fullName": "Purchase Price Allocation",
+      "zh": "购买价分摊，在企业合并中把收购对价分配至可辨认资产、负债及商誉等项目。",
+      "practical": "检验并购后无形资产摊销、商誉规模和利润变化。",
+      "plain": "买公司后，要把价格分清哪些对应资产、哪些是商誉。",
+      "related": [
+        "goodwill",
+        "fair-value",
+        "nci"
+      ],
+      "note": "PPA 是实务简称；具体确认和计量依企业合并准则，不能把所有股权交易都当作会计上的企业合并。",
+      "aliases": [
+        "购买价分摊"
+      ]
+    },
+    {
+      "id": "goodwill",
+      "category": "mandA",
+      "term": "Goodwill",
+      "fullName": "Goodwill",
+      "zh": "商誉，企业合并中对价及相关权益超过取得的可辨认净资产金额形成的余额。",
+      "practical": "判断收购溢价是否能由未来协同和现金流支持，并关注减值。",
+      "plain": "买价中无法单独归到某项可辨认资产的那部分。",
+      "related": [
+        "ppa",
+        "impairment",
+        "synergy"
+      ],
+      "note": "计量还涉及非控制性权益、原持有权益及廉价购买等情形；商誉不是可单独交易的现金资产。",
+      "aliases": [
+        "商誉"
+      ]
+    },
+    {
+      "id": "nci",
+      "category": "mandA",
+      "term": "NCI",
+      "fullName": "Non-controlling Interest",
+      "zh": "非控制性权益，子公司权益中不归属于母公司的部分。",
+      "practical": "在合并报表、商誉计量和 EV 到母公司股权价值桥接时识别少数股东份额。",
+      "plain": "子公司里属于其他股东的那一份。",
+      "related": [
+        "ppa",
+        "goodwill",
+        "ev"
+      ],
+      "note": "也称少数股东权益；是否加入 EV 桥接及采用何种金额须与分子分母和交易口径一致。",
+      "aliases": [
+        "Minority Interest",
+        "少数股东权益",
+        "非控股权益"
       ]
     },
     {

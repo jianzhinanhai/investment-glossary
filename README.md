@@ -1,6 +1,6 @@
 # Investment Glossary｜投资术语交互式知识库
 
-一个无后端、无账号的投资知识手册：150 个术语、8 个分类、6 张可交互 SVG 图解。使用原生 HTML、CSS 和 JavaScript，可部署在 GitHub Pages 子路径下。
+一个无后端、无账号的投资知识手册：180 个术语、8 个分类、6 张可交互 SVG 图解。使用原生 HTML、CSS 和 JavaScript，可部署在 GitHub Pages 子路径下。
 
 ## 使用
 
@@ -29,7 +29,7 @@ python tools/preview_server.py 8765
 python tools/build_data.py
 ```
 
-脚本校验 8 个分类的精确数量、150 个唯一词条 ID、六项必填内容以及关联术语链接，再生成独立的 `data/glossary.json`。增补词条时应同步调整脚本中的分类数量与总数约束。发布任何资源或词库修订时，请提升 `sw.js` 中的缓存版本，使旧缓存被清理。
+脚本校验 8 个分类的精确数量、180 个唯一词条 ID、六项必填内容以及关联术语链接，再生成独立的 `data/glossary.json`。增补词条时应同步调整脚本中的分类数量与总数约束。发布任何资源或词库修订时，请提升 `sw.js` 中的缓存版本，使旧缓存被清理。
 
 ## 质量检查
 
