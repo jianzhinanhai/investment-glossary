@@ -7,21 +7,24 @@
   window.DIAGRAMS = [
     {
       id: "deal", title: "投资交易流程", subtitle: "从项目发现，到交易真正落地",
-      note: "NDA 通常先于资料交换；DD 与条款谈判可能交叉进行。Signing 到 Closing 之间通常要满足先决条件。",
-      svg: start("deal", "投资交易流程", "Sourcing、NDA 和 DD、TS 和 IC、Signing、Closing、PMI 依次推进", 515) +
-        node(36, 16, 288, "Sourcing", "sourcing", "发现与筛选机会") +
-        arrow("deal", 180, 75, 180, 91) +
-        node(36, 100, 135, "NDA", "nda", "保密协议") +
-        node(189, 100, 135, "DD", "dd", "尽职调查") +
-        arrow("deal", 180, 159, 180, 175) +
-        node(36, 184, 135, "TS", "ts", "条款清单") +
-        node(189, 184, 135, "IC", "ic", "投资决策") +
-        arrow("deal", 180, 243, 180, 259) +
-        node(36, 268, 288, "Signing", "signing", "签署正式协议") +
-        arrow("deal", 180, 327, 180, 343) +
-        node(36, 352, 288, "Closing", "closing", "满足条件并完成交割") +
-        arrow("deal", 180, 411, 180, 427) +
-        node(36, 436, 288, "PMI", "pmi", "并购后整合") + "</svg>"
+      note: "示意路径：NDA 通常先于非公开资料交换。TS 可在初步核查后、深入 DD 前形成，也可能与 DD 交错；部分机构会在 TS 前安排初步 IC 授权。图中的 IC 指结合关键尽调和拟议条款的最终投资审批。Signing 后还需满足交割条件才到 Closing；PMI 适用于并购交易。",
+      svg: start("deal", "投资交易流程", "一种示意主线：Sourcing、NDA、TS、DD、最终 IC、Signing、Closing、PMI。TS 与 DD 的先后可能变化，部分机构有初步 IC 审批。", 660) +
+        `<text class="muted-text" x="180" y="24" text-anchor="middle">示意主线 · 条款与尽调可能交错</text>` +
+        node(36, 36, 288, "Sourcing", "sourcing", "发现与筛选机会") +
+        arrow("deal", 180, 95, 180, 105) +
+        node(36, 114, 288, "NDA", "nda", "交换非公开资料前签署") +
+        arrow("deal", 180, 173, 180, 183) +
+        node(36, 192, 288, "TS", "ts", "初步评估后明确拟议条款") +
+        arrow("deal", 180, 251, 180, 261) +
+        node(36, 270, 288, "DD", "dd", "深入核验并完善交易条件") +
+        arrow("deal", 180, 329, 180, 339) +
+        node(36, 348, 288, "IC · 最终审批", "ic", "结合关键尽调结果作决定") +
+        arrow("deal", 180, 407, 180, 417) +
+        node(36, 426, 288, "Signing", "signing", "签署正式协议") +
+        arrow("deal", 180, 485, 180, 495) +
+        node(36, 504, 288, "Closing", "closing", "满足条件并完成交割") +
+        arrow("deal", 180, 563, 180, 573) +
+        node(36, 582, 288, "PMI", "pmi", "并购后的业务整合") + "</svg>"
     },
     {
       id: "ev", title: "企业估值结构", subtitle: "企业价值如何桥接股权价值",

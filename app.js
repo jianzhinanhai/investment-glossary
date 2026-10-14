@@ -199,6 +199,15 @@
       if (state.installPrompt) { state.installPrompt.prompt(); await state.installPrompt.userChoice; state.installPrompt = null; }
       else toast("iPhone：Safari 分享 → 添加到主屏幕；Android：浏览器菜单 → 安装应用。");
     });
+    $("#share-site").addEventListener("click", async () => {
+      const url = "https://jianzhinanhai.github.io/investment-glossary/";
+      if (navigator.share) {
+        try { await navigator.share({ title: document.title, url }); return; }
+        catch (error) { if (error.name === "AbortError") return; }
+      }
+      try { await navigator.clipboard.writeText(url); toast("网站链接已复制，可以转发。"); }
+      catch { window.prompt("复制此链接并转发", url); }
+    });
     window.addEventListener("beforeinstallprompt", (event) => { event.preventDefault(); state.installPrompt = event; });
   };
   const init = async () => {

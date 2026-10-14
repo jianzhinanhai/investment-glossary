@@ -3,4 +3,5 @@ test-results/
 playwright-report/
 .playwright-browsers/
 .tmp/
+__pycache__/
 .DS_Store

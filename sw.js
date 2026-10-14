@@ -1,5 +1,5 @@
 /* Bump the cache version for each published asset or glossary update. */
-const CACHE_NAME = "investment-glossary-v1.0.0";
+const CACHE_NAME = "investment-glossary-v1.0.1";
 const ASSETS = [
   "./", "./index.html", "./styles.css", "./app.js", "./diagrams.js",
   "./data/glossary.json", "./sources.html", "./manifest.webmanifest",
